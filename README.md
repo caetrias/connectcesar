@@ -1,4 +1,4 @@
-<h1 align="center">Connect Cesar </h1>
+<h1 align="center">Connect C.E.S.A.R </h1>
 
 # Índice
 * [Descrição](#descrição)
