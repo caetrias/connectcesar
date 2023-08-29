@@ -19,9 +19,9 @@ Dessa forma, com o Connect CESAR, o network entre os estudantes será impulsiona
 
 
 ## Equipe
-* Arthur Pinheiro
-* Emanuel Eduardo de Sousa
-* Gabriel Caetano
-* Igor Alves
-* João Vítor Meneses
-* Lucas Kabbaz
+* Arthur Pinheiro - apb@cesar.school
+* Emanuel Eduardo de Sousa - eess2@cesar.school
+* Gabriel Caetano - gcgpf@cesar.school
+* Igor Alves - iaa@cesar.school
+* João Vítor Meneses - jvmf@cesar.school
+* Lucas Kabbaz - lbk@cesar.school
