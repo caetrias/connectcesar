@@ -2,6 +2,8 @@
   <img width="200" display=inline-block src=imagem_2023-08-28_212900261.png>
 <h1 align="center">Connect CESAR </h1>
 
+>Status: 🚧 Em desenvolvimento... 🚧
+
 # Índice
 * [Descrição](#descrição)
 * [Funcionalidades](#funcionalidades)
