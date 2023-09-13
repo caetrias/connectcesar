@@ -1,6 +1,6 @@
 <p align="center">
   <img width="200" display=inline-block src=imagem_2023-08-28_212900261.png>
-<h1 align="center">Connect C.E.S.A.R </h1>
+<h1 align="center">Connect CESAR </h1>
 
 # Índice
 * [Descrição](#descrição)
