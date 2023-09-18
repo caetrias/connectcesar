@@ -20,8 +20,8 @@ Através do seu uso, os alunos poderão formar grupos mais facilmente, visualiza
 Dessa forma, com o Connect CESAR, o network entre os estudantes será impulsionado, levando os grupos a serem montados de uma maneira rápida, prática e eficiente.
 
 ## Entrega_1
-* <a href="https://www.figma.com/file/UyXPbIk4jsHQoTUXDffQGl/Connect-CESAR?type=design&node-id=516%3A91&mode=design&t=HFYYJSwDUDUiuZqm-1" target="_blank">Figma</a>
-* <a href="https://connectcesar.atlassian.net/jira/software/projects/CC/boards/1/" target="_blank">Jira</a>
+* <a href="https://www.figma.com/file/UyXPbIk4jsHQoTUXDffQGl/Connect-CESAR?type=design&node-id=516%3A91&mode=design&t=HFYYJSwDUDUiuZqm-1" target="_blank" rel="noopener noreferrer">Figma</a>
+* <a href="https://connectcesar.atlassian.net/jira/software/projects/CC/boards/1/" target="_blank" rel="noopener noreferrer">Jira</a>
 
 ## Entrega_2
 
