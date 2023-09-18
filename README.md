@@ -6,7 +6,6 @@
 
 # Índice
 * [Descrição](#descrição)
-* [Funcionalidades](#funcionalidades)
 * [Equipe](#equipe)
 
 ## Descrição
@@ -15,9 +14,6 @@ Plataforma criada para a cadeira de Fundamentos de Desenvolvimento de Software c
 Através do seu uso, os alunos poderão formar grupos mais facilmente, visualizando os perfis das pessoas cadastradas com as mais diversas informações, como tipo de perfil, características, habilidades, interesses, etc.
 
 Dessa forma, com o Connect CESAR, o network entre os estudantes será impulsionado, levando os grupos a serem montados de uma maneira rápida, prática e eficiente.
-
-
-## Funcionalidades
 
 
 ## Equipe
