@@ -7,6 +7,10 @@
 # Índice
 * [Descrição](#descrição)
 * [Equipe](#equipe)
+* [Entrega 1](#entrega_1)
+* [Entrega 2](#entrega_2)
+* [Entrega 3](#entrega_3)
+* [Entrega 4](#entrega_4)
 
 ## Descrição
 Plataforma criada para a cadeira de Fundamentos de Desenvolvimento de Software com o intuito de reunir os estudantes das graduações da CESAR School na cadeira de Projetos. 
@@ -15,6 +19,13 @@ Através do seu uso, os alunos poderão formar grupos mais facilmente, visualiza
 
 Dessa forma, com o Connect CESAR, o network entre os estudantes será impulsionado, levando os grupos a serem montados de uma maneira rápida, prática e eficiente.
 
+## Entrega_1
+
+## Entrega_2
+
+## Entrega_3
+
+## Entrega_4
 
 ## Equipe
 * Arthur Pinheiro - apb@cesar.school
