@@ -7,10 +7,8 @@
 # Índice
 * [Descrição](#descrição)
 * [Equipe](#equipe)
+* [Links](#links)
 * [Entrega 1](#entrega_1)
-* [Entrega 2](#entrega_2)
-* [Entrega 3](#entrega_3)
-* [Entrega 4](#entrega_4)
 
 ## Descrição
 Plataforma criada para a cadeira de Fundamentos de Desenvolvimento de Software com o intuito de reunir os estudantes das graduações da CESAR School na cadeira de Projetos. 
@@ -19,15 +17,24 @@ Através do seu uso, os alunos poderão formar grupos mais facilmente, visualiza
 
 Dessa forma, com o Connect CESAR, o network entre os estudantes será impulsionado, levando os grupos a serem montados de uma maneira rápida, prática e eficiente.
 
-## Entrega_1
+## Links
 * <a href="https://www.figma.com/file/UyXPbIk4jsHQoTUXDffQGl/Connect-CESAR?type=design&node-id=516%3A91&mode=design&t=HFYYJSwDUDUiuZqm-1" target="_blank" rel="noopener noreferrer">Figma</a>
 * <a href="https://connectcesar.atlassian.net/jira/software/projects/CC/boards/1/" target="_blank" rel="noopener noreferrer">Jira</a>
 
-## Entrega_2
 
-## Entrega_3
+## Entrega_1
+<a href="https://drive.google.com/file/d/1SBElWr8Og6MIkIEGrB-vvPUCRnvjlBSs/view?usp=sharing" target="_blank" rel="noopener noreferrer">Screencast</a>
+<h3 align="left">Print do Backlog</h3>
+<p align="left">
+  <img width="700" display=inline-block src=backlog.png>
 
-## Entrega_4
+<h3 align="left">Print do Quadro Sprint 1</h3>
+<p align="left">
+  <img width="1000" display=inline-block src=quadro_sprint1.png>
+
+
+
+
 
 ## Equipe
 * Arthur Pinheiro - apb@cesar.school
