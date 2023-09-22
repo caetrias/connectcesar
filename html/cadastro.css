@@ -1,0 +1,10 @@
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 200px;
+    text-align: center;
+    
+}
+.container{
+    background-color: rgba(69, 96, 108, 0.898);
+    padding-bottom: 90px;
+}
