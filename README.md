@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="200" display=inline-block src=imagem_2023-08-28_212900261.png>
+  <img width="200" display=inline-block src="./img/imagem_2023-08-28_212900261.png">
 <h1 align="center">Connect CESAR </h1>
 
 >Status: 🚧 Em desenvolvimento... 🚧
@@ -26,11 +26,11 @@ Dessa forma, com o Connect CESAR, o network entre os estudantes será impulsiona
 <a href="https://drive.google.com/file/d/1SBElWr8Og6MIkIEGrB-vvPUCRnvjlBSs/view?usp=sharing" target="_blank" rel="noopener noreferrer">Screencast</a>
 <h3 align="left">Print do Backlog</h3>
 <p align="left">
-  <img width="700" display=inline-block src=backlog.png>
+  <img width="700" display=inline-block src="./img/backlog.png">
 
 <h3 align="left">Print do Quadro Sprint 1</h3>
 <p align="left">
-  <img width="1000" display=inline-block src=quadro_sprint1.png>
+  <img width="1000" display=inline-block src="./img/quadro_sprint1.png">
 
 
 
