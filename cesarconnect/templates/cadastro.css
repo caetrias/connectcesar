@@ -1,0 +1,16 @@
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    
+}
+.container{
+    background-color: rgba(69, 96, 108, 0.898);
+    padding-bottom: 90px;
+}
+p{
+    text-align: center;
+}
+.form-label{
+    text-align: center;
+}
