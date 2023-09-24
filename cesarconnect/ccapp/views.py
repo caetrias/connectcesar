@@ -7,3 +7,6 @@ def login(request):
 
 def cadastro(request):
     return render(request, 'cadastro.html')
+
+def tela_inicial(request):
+    return render(request, 'tela_inicial.html')
