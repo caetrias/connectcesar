@@ -10,3 +10,9 @@ def cadastro(request):
 
 def tela_inicial(request):
     return render(request, 'tela_inicial.html')
+
+def criargrupo(request):
+    return render(request, 'criargrupo.html')
+
+def meugrupo(request):
+    return render(request, 'meugrupo.html')

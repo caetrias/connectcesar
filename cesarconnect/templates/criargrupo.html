@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Criar Grupo</title>
+    <style>
+      .circle-upload {
+          width: 175px;
+          height: 175px;
+          background-color: #ffffff;
+          border-radius: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          margin-top: 50px;
+      }
+      #input-foto {
+          display: none;
+      }
+      .plus-sign{
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: -10px;
+      }
+      .add-photo-text{
+        margin-top: 5px;
+        text-align: center;
+      }
+      .circle-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      .right-section{
+        flex: 1;
+        padding: 20px;
+        padding-left: 150px;
+      }
+      .custom-input{
+        max-width: 500px;
+      }
+  </style>
+
+</head>
+<body style="background-color: #bdbaba;">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary"> <!-- header da página-->
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">ConnectCESAR</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Início</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Perfil
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Meu Perfil</a></li>
+              <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Sair</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+
+
+  <h1 style="text-align: center;">CRIAÇÃO DE GRUPO</h1>
+
+  <!-- retângulo cinza que contém as informações-->
+  <div style="background-color: #9c9999; padding: 20px; border-radius: 10px; max-width: 1300px; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-between; height: 550px; padding-left: 150px;">
+    <div>
+    <div class="circle-upload"> <!-- círculo de adicionar foto-->
+    <label for="input-foto" class="circle-content">
+        <span class="plus-sign">+</span>
+        <div class="add-photo-text">Adicionar Foto</div>
+    </label>
+    <input type="file" id="input-foto" accept="image/*">
+    </div>
+  </div>
