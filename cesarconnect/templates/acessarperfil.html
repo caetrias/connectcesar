@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+            .profile-links {
+    background-color: #9c9999;
+    padding: 30px 20px;
+    text-align: center;
+    margin: 100px 70px 0 70px;
+    border-radius: 10px;
+}
+
+.profile-links img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.profile-links li {
+    display: block;
+    margin: 10px 0;
+}
+
+@media (max-width:1200px) {
+    .mt-custum {
+        margin-top: 50px;
+    }
+    .profile-links {
+        background-color: #9c9999;
+        padding: 30px 20px;
+        text-align: center;
+        margin: 50px 50px 0 50px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width:991px) {
+    .mt-custum {
+        margin-top: 20px;
+    }
+    .profile-links {
+        background-color: #9c9999;
+        padding: 30px 20px;
+        text-align: center;
+        margin: 20px 0 0 0;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width:600px) {
+    .profile-links li {
+        margin: 0;
+    }
+    .profile-links img {
+        margin-bottom: 10px;
+    }
+    .mt-custum .details {
+        padding: 10px;
+    }
+}
+        </style>
+    <title>Acessar Perfil</title>
+</head>
+
+<body style="background-color: #B5B5B5">
+    <!-- Início da barra de navegação -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow mb-5 fixed-top">
+        <div class="container-fluid">
+          <!-- Logo da marca -->
+          <a class="navbar-brand" href="#">ConnectCESAR</a>
+          <!-- Botão para colapsar o menu em telas menores -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Itens do menu -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">  
+              <!-- Item Início -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Início</a>
+              </li>
+              <!-- Item Criar Grupo -->
+              <li class="nav-item">
+                <a class="nav-link" href="/criargrupo/">Criar Grupo</a>
+              </li>
+              <!-- Dropdown do Perfil -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Perfil
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Meu Perfil</a></li>
+                  <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/">Sair</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- Formulário de busca -->
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav> <br>
+    <div class="container">
+                <!-- Container com Informacoes -->
+                <div class="profile-links">
+                    <img class="card-img-top rounded-circle shadow bg-white" style="width: 150px" src="http://avatars.dicebear.com/api/open-peeps/stefan.svg" alt="...">
+                    <li><a style="font-size: 30px;">Nome Aluno Teste</a></li>
+                    <li><a>2 periodo</a></li>
+                    <h3 class="mt-5">Sobre Mim</h3>
+                    <p class="text-justify">
+                        📚 Estudante apaixonado por aprender e crescer a cada dia! 🚀
+
+                        🏫 Atualmente, estou cursando o último ano do Ensino Médio na Escola Secundária da Cidade. 🎓
+                        
+                        📖 Minhas matérias favoritas são Matemática e Ciências, e estou sempre em busca de desafios intelectuais para expandir meus horizontes.
+                        
+                        🔬 Além dos estudos, sou membro ativo do clube de ciências da escola, onde tive a oportunidade de participar de projetos incríveis.
+                        
+                        🎵 Nas horas vagas, você pode me encontrar tocando guitarra ou explorando novas trilhas de mountain bike - adoro aventuras ao ar livre!
+                        
+                        🌟 Meu objetivo é continuar minha jornada acadêmica e me dedicar a pesquisas científicas no futuro. Sonho em fazer a diferença no mundo, um passo de cada vez.
+                        
+                        🌍 Vamos juntos nessa jornada de aprendizado e crescimento! 🌱
+                </p>
+                </div>
+            </div>
+            <!-- Container Postagens -->
+            <div class="container">
+        
+                <div class="profile-links">
+                   
+                    <li><a style="font-size: 70px;">Postagens</a></li>
+                   
+                        
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
