@@ -7,8 +7,19 @@ from django.db import models
 #     nome = models.CharField(max_length=200)
 #     #senha = 
 
-class Perfil(models.Model):
+class Perfil(models.Model):   #NAO UTILIZAR ESSE MODEL - FOI USADO COMO TESTE - DESCOBRIR COMO DESINSTALAR
     nome = models.CharField(max_length=200)
+    descricao = models.TextField(null=True, blank=True)
+    criado = models.DateTimeField(auto_now_add=True)
+    atualizado = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.nome
+
+class Usuario(models.Model): 
+    id_usuario = models.AutoField(primary_key=True) 
+    nome = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
     descricao = models.TextField(null=True, blank=True)
     criado = models.DateTimeField(auto_now_add=True)
     atualizado = models.DateTimeField(auto_now=True)

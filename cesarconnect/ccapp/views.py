@@ -16,3 +16,6 @@ def criargrupo(request):
 
 def meugrupo(request):
     return render(request, 'meugrupo.html')
+
+def acessarperfil(request):
+    return render(request, 'acessarperfil.html')
