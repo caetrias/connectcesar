@@ -19,3 +19,6 @@ def meugrupo(request):
 
 def acessarperfil(request):
     return render(request, 'acessarperfil.html')
+
+def editar_perfil(request):
+    return render(request, 'editar_perfil.html')
