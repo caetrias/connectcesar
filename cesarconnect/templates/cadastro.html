@@ -33,9 +33,9 @@
       {% csrf_token %}
     <div style="text-align: center;" class="container">
            <h1>Cadastro</h1>
-            Nome <input name="username" class="form-control-sm" type="text">
-            Email <input name="email" class="form-control-sm" type="email">
-            Senha <input name="senha" class="form-control-sm" type="password">
+            Nome <input name="username" class="form-control-sm" type="text" required>
+            Email <input name="email" class="form-control-sm" type="email" required>
+            Senha <input name="senha" class="form-control-sm" type="password" required>
             <button class="form-control-sm">Enviar</button>
       </div>
     </form>
