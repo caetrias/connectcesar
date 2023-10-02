@@ -34,21 +34,22 @@
     <div class="container">
         
         <hr>
-        <form>
+        <form action="{% url 'login' %}" method="POST">
+          {% csrf_token %}
           <div class="mb-3">
             <h1>Login</h1>
-            <label for="exampleInputEmail1" class="form-label">E-MAIL</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">Nome</label>
+            <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             <div id="emailHelp" class="form-text"></div>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">SENHA</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <input type="password" name="senha" class="form-control" id="exampleInputPassword1">
           </div>
           <div class="mb-3 form-check">
             
           </div>
-          <a href="tela_inicial/"><button type="button" class="btn btn-primary">ENTRAR</button></a>
+          <button class="form-control-sm">Entrar</button>
           <a href="cadastro/"><button type="button" class="btn btn-warning"> CRIAR CONTA</button></a>
         </form>
       </div>

@@ -1,3 +1,6 @@
+#tela_inicial
+
+
 <!doctype html>
 <html lang="pt-BR">
   <head>
@@ -41,7 +44,7 @@
 
     </style>
 </head>
-<body style="background-color: #B5B5B5;">
+<body>
 
     <!-- Início da barra de navegação -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary shadow mb-5 fixed-top">
@@ -69,8 +72,8 @@
                   Perfil
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Meu Perfil</a></li>
-                  <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+                  <li><a class="dropdown-item" href="/acessarperfil/">Meu Perfil</a></li>
+                  <li><a class="dropdown-item" href="/editar_perfil/">Editar Perfil</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="/">Sair</a></li>
                 </ul>
@@ -93,11 +96,11 @@
             <div class="d-flex justify-content-center mt-3 position-fixed">
               <div class="card align-items-center justify-content-around" style="width: 300px; height: 400px; background-color: #9c9999;"> 
                 <!-- Imagem do perfil -->
-                <img class="card-img-top rounded-circle shadow bg-white" style="width: 150px" src="http://avatars.dicebear.com/api/open-peeps/stefan.svg" alt="...">
+                <a href="/acessarperfil/"> <img class="card-img-top rounded-circle shadow bg-white" style="width: 150px" src="http://avatars.dicebear.com/api/open-peeps/stefan.svg" alt="..."> </a>
                 <!-- Nome do usuário -->
                 <h5>Nome do Perfil</h5>
                 <!-- Botão para editar perfil -->
-                <a href="#" class="btn btn-dark">Editar Perfil</a>
+                <a href="/editar_perfil/" class="btn btn-dark">Editar Perfil</a>
               </div>
             </div>
           </div>

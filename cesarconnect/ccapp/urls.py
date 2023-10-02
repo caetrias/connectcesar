@@ -10,5 +10,7 @@ urlpatterns = [
     path('criargrupo/', views.criargrupo, name="criargrupo"),
     path('meugrupo/', views.meugrupo, name="meugrupo"),
     path('acessarperfil/', views.acessarperfil, name="acessarperfil"),
+    path('editar_perfil/', views.editar_perfil, name="editar_perfil"),
+    path('listagemusuarios/', views.listagemusuarios, name="listagem_usuarios")
     
 ]
