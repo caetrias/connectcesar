@@ -39,11 +39,15 @@ Dessa forma, com o Connect CESAR, o network entre os estudantes será impulsiona
 <p align="left">
   <img width="700" display=inline-block src="./img/diagrama.jpeg">
 
-  ### Relato Programação em Par
-https://docs.google.com/document/d/1HMgFS6grvc7ghHJqa_3I_6-wmORn5KY4ejPAV3zUSWQ/edit
+  <h3 align="left">Issue/bug tracker</h3>
+<p align="left">
+  <img width="1000" display=inline-block src="./img/issue.png">
 
   ### Instruções de Uso
   https://docs.google.com/document/d/1u0d6eJo4CssFMLD0yrG8uC1CYGwSa5j2c7FekSvYrls/edit
+
+   ### Relato Programação em Par
+  https://docs.google.com/document/d/1HMgFS6grvc7ghHJqa_3I_6-wmORn5KY4ejPAV3zUSWQ/edit
 
 <h3 align="left">Print do Backlog</h3>
 <p align="left">
