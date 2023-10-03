@@ -28,12 +28,12 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: pip install -r cesarconnect/requirements.txt
+        run: pip install -r ./cesarconnect/requirements.txt
 
         
       - name: Cleaning testing files
         run: |
-          cd cesarconnect/
+          cd ./cesarconnect/
           rm db.sqlite3
           rm .env
           cd ..
