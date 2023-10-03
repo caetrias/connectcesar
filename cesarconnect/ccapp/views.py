@@ -86,7 +86,26 @@ def criargrupo(request):
 
 
 def meugrupo(request):
-    return render(request, 'meugrupo.html')
+    grupo_id = request.session.get('grupo_id', None)
+
+    if grupo_id is None:
+        return HttpResponse("Erro")
+    
+    try:
+        grupo = Grupo.objects.get(id_grupo=grupo_id)
+    except Grupo.DoesNotExist:
+        return HttpResponse("Grupo não existe")
+    
+    if 'pessoa_id' in request.session:
+        pessoa_id = request.session['pessoa_id']
+        pessoa = Pessoa.objects.get(id_usuario=pessoa_id)
+        nome_usuario = pessoa.nome
+        context = {
+            'nome_usuario': nome_usuario,
+            'grupo': grupo,
+        }
+
+    return render(request, 'meugrupo.html', context)
 
 def acessarperfil(request):
     if 'pessoa_id' in request.session:

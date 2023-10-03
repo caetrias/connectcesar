@@ -66,13 +66,15 @@ body{
   <br> 
 
 
-  <h1 class="meugrupo"  style="text-align: center;">MEU GRUPO</h1>
+  <h1 class="meugrupo"  style="text-align: center;">{{ grupo.nome_grupo }}</h1>
 
   <!-- retângulo que contém as informações da página-->
   <div style="background-color: #b8b7b7; padding: 20px; border-radius: 10px; max-width: 1300px; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-between; height: 550px;">
     <div style="display: flex; flex-direction:column; align-items: flex-start;">
     <h3 style="margin-left: 20px;">DESCRIÇÃO</h3> <!-- área onde ficará a descrição do grupo-->
-    <div style="background-color: white; width: 750px; height: 100px; border-radius: 10px; margin-left: 20px;"></div>
+    <div style="background-color: white; width: 750px; height: 100px; border-radius: 10px; margin-left: 20px;">
+    {{grupo.descricao_grupo}}
+    </div>
     
     <br>
 
@@ -85,7 +87,7 @@ body{
       <h3>PARTICIPANTES</h3>
       <div class="participant">
         <img src="http://avatars.dicebear.com/api/open-peeps/stefan.svg" alt="Você">
-        <p>Você</p>
+        <p>{{ nome_usuario }}</p>
       </div>
       <div class="participant">
         <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Max" alt="Participante 2">
