@@ -70,7 +70,7 @@ def criargrupo(request):
         periodo = request.POST.get('periodo')
         
         if Grupo.objects.filter(nome_grupo = nome_grupo).exists():
-            return render(request, "grupoinvalido.html")
+            return render(request, "grupo_invalido.html")
         
         novo_grupo = Grupo()
         novo_grupo.nome_grupo = nome_grupo
@@ -107,5 +107,5 @@ def emailinvalido(request):
 def senhaincorreta(request):
     return render(request, 'senhaincorreta.html')
 
-def grupoinvalido(request):
+def grupo_invalido(request):
     return render(request, 'grupoinvalido.html')

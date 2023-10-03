@@ -13,5 +13,5 @@ urlpatterns = [
     path('editar_perfil/', views.editar_perfil, name="editar_perfil"),
     path('emailinvalido/', views.emailinvalido, name="emailinvalido"),
     path('senhaincorreta/', views.senhaincorreta, name="senhaincorreta"),
-    path('grupoinvalido/', views.grupoinvalido, name="grupoinvalido"),
+    path('grupo_invalido/', views.grupo_invalido, name="grupo_invalido"),
 ]
