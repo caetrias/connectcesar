@@ -47,7 +47,7 @@ https://docs.google.com/document/d/1HMgFS6grvc7ghHJqa_3I_6-wmORn5KY4ejPAV3zUSWQ/
 
 <h3 align="left">Print do Backlog</h3>
 <p align="left">
-  <img width="700" display=inline-block src="./img/backlog_2.png">
+  <img width="1000" display=inline-block src="./img/backlog_2.png">
 
 <h3 align="left">Print do Quadro Sprint 1</h3>
 <p align="left">
