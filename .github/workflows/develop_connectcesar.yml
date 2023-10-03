@@ -7,7 +7,7 @@ name: Build and deploy Python app to Azure Web App - ConnectCESAR
 on:
   push:
     branches:
-      - prod
+      - Develop
   workflow_dispatch:
 
 jobs:
