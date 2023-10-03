@@ -9,6 +9,7 @@
 * [Equipe](#equipe)
 * [Links](#links)
 * [Entrega 1](#entrega_1)
+* [Entrega 2](#entrega_2)
 
 ## Descrição
 Plataforma criada para a cadeira de Fundamentos de Desenvolvimento de Software com o intuito de reunir os estudantes das graduações da CESAR School na cadeira de Projetos. 
@@ -32,6 +33,25 @@ Dessa forma, com o Connect CESAR, o network entre os estudantes será impulsiona
 <p align="left">
   <img width="1000" display=inline-block src="./img/quadro_sprint1.png">
 
+
+## Entrega_2
+<h3 align="left">Diagrama de atividades</h3>
+<p align="left">
+  <img width="700" display=inline-block src="./img/diagrama.jpeg">
+
+  ### Relato Programação em Par
+https://docs.google.com/document/d/1HMgFS6grvc7ghHJqa_3I_6-wmORn5KY4ejPAV3zUSWQ/edit
+
+  ### Instruções de Uso
+  https://docs.google.com/document/d/1u0d6eJo4CssFMLD0yrG8uC1CYGwSa5j2c7FekSvYrls/edit
+
+<h3 align="left">Print do Backlog</h3>
+<p align="left">
+  <img width="700" display=inline-block src="./img/backlog_2.png">
+
+<h3 align="left">Print do Quadro Sprint 1</h3>
+<p align="left">
+  <img width="1000" display=inline-block src="./img/board_2.png">
 
 
 
