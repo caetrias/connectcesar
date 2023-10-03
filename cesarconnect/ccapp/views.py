@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Pessoa
+from .models import Pessoa, Grupo
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth import login as login_django
@@ -60,8 +60,30 @@ def tela_inicial(request):
     else:
         return redirect('login')
 
+
 def criargrupo(request):
-    return render(request, 'criargrupo.html')
+    if request.method == "GET":
+        return render(request, 'criargrupo.html')
+    else:
+        nome_grupo = request.POST.get('nome_grupo')
+        descricao_grupo = request.POST.get('descricao_grupo')
+        periodo = request.POST.get('periodo')
+        
+        if Grupo.objects.filter(nome_grupo = nome_grupo).exists():
+            return render(request, "grupoinvalido.html")
+        
+        novo_grupo = Grupo()
+        novo_grupo.nome_grupo = nome_grupo
+        novo_grupo.descricao_grupo = descricao_grupo
+        novo_grupo.periodo = periodo
+        novo_grupo.save()
+        
+        try:
+            request.session['grupo_id'] = novo_grupo.id_grupo
+            return redirect('meugrupo')
+        except Grupo.DoesNotExist:
+            return HttpResponse("Grupo não existe")
+
 
 def meugrupo(request):
     return render(request, 'meugrupo.html')
@@ -84,3 +106,6 @@ def emailinvalido(request):
 
 def senhaincorreta(request):
     return render(request, 'senhaincorreta.html')
+
+def grupoinvalido(request):
+    return render(request, 'grupoinvalido.html')
