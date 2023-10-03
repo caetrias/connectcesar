@@ -1,3 +1,4 @@
+Django==4.2
 appdirs==1.4.3
 apturl==0.5.2
 asgiref==3.7.2
@@ -17,7 +18,6 @@ defer==1.0.6
 distlib==0.3.7
 distro==1.4.0
 distro-info==0.23+ubuntu1.1
-Django==4.2
 duplicity==0.8.12.0
 entrypoints==0.3
 fasteners==0.14.1
