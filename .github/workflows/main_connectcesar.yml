@@ -1,13 +1,13 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
-# More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
+# More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions 
 
-name: Build and deploy Python app to Azure Web App - ConnectCESAR
+name: Build and deploy Python app to Azure Web App - connectcesar
 
 on:
   push:
     branches:
-      - main
+      - prod
   workflow_dispatch:
 
 jobs:
@@ -29,6 +29,14 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r cesarconnect/requirements.txt
+
+        
+      - name: Cleaning testing files
+        run: |
+          cd Pcesarconnect/
+          rm db.sqlite3
+          rm .env
+          cd ..
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
@@ -37,7 +45,7 @@ jobs:
         with:
           name: python-app
           path: |
-            cesarconnect 
+            cesarconnect
             !venv/
 
   deploy:
@@ -53,11 +61,11 @@ jobs:
         with:
           name: python-app
           path: .
-          
+            
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
           app-name: 'ConnectCESAR'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9DFFC4A6336B4F16A536B90790F4CFC2 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_07514F94771842B69A0783891B79DAD6 }}
