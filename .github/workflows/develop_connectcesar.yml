@@ -45,7 +45,7 @@ jobs:
         with:
           name: python-app
           path: |
-            cesarapp
+            cesarconnect
             !venv/
 
   deploy:
