@@ -68,4 +68,4 @@ jobs:
         with:
           app-name: 'ConnectCESAR'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_07514F94771842B69A0783891B79DAD6 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_9d14239c0c424368b6fa6bd438a92ac3 }}
