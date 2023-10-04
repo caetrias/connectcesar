@@ -1,6 +1,6 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
-# More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
+# More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions 
 
 name: Build and deploy Python app to Azure Web App - ConnectCESAR
 
@@ -28,7 +28,15 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r ./cesarconnect/requirements.txt
+
+        
+      - name: Cleaning testing files
+        run: |
+          cd ./cesarconnect/
+          rm db.sqlite3
+          rm .env
+          cd ..
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
@@ -37,7 +45,7 @@ jobs:
         with:
           name: python-app
           path: |
-            . 
+            cesarconnect
             !venv/
 
   deploy:
@@ -53,7 +61,7 @@ jobs:
         with:
           name: python-app
           path: .
-          
+            
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
