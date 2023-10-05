@@ -37,6 +37,7 @@ Dessa forma, com o Connect CESAR, o network entre os estudantes será impulsiona
 ## Entrega_2
 <h3>Nosso Site: https://connectcesar.azurewebsites.net</h3>
 <br>
+<a href="https://drive.google.com/file/d/1O2j2OB6mMg8GoZ5uzlDdFKKlv8-FRavv/view?usp=sharing" target="_blank" rel="noopener noreferrer">Screencast 2</a>
 <h3 align="left">Diagrama de atividades</h3>
 <p align="left">
   <img width="700" display=inline-block src="./img/diagrama.jpeg">
