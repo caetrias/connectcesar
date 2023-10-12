@@ -56,6 +56,9 @@
 
 <h2>Links Importantes</h2>
 <ul>
+    <li>
+        <a href="https://connectcesar.azurewebsites.net/">Site</a>
+    </li>
   <li>
     <a
       href="https://docs.google.com/document/d/1u0d6eJo4CssFMLD0yrG8uC1CYGwSa5j2c7FekSvYrls/edit"
