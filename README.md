@@ -25,10 +25,6 @@
     alt="Language Count"
   />
   <img
-    src="https://img.shields.io/bitbucket/issues/caetrias/connectcesar?style=flat&logo=github"
-    alt="Open Issues"
-  />
-  <img
     src="https://img.shields.io/github/commit-activity/t/caetrias/connectcesar?style=flat&logo=github"
     alt="Commit Activity"
   />
@@ -221,7 +217,7 @@
   </li>
 </ul>
 
-<h2>Contribuíntes 👨‍👩‍👧‍👦</h2>
+<h2>Contribuintes 👨‍👩‍👧‍👦</h2>
 <a href="https://github.com/caetrias/connectcesar/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=caetrias/connectcesar" />
 </a>
