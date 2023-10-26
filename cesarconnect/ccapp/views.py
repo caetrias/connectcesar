@@ -139,3 +139,18 @@ def senhaincorreta(request):
 
 def grupo_invalido(request):
     return render(request, 'grupo_invalido.html')
+
+def resultado_pesquisa(request):
+    if request.method == "GET":
+        busca = request.GET.get("pesquisa")
+
+        resultados_pessoa = Pessoa.objects.filter(nome__icontains=busca)
+        resultados_grupo = Grupo.objects.filter(nome_grupo__icontains=busca)
+
+        context = {
+            'resultados_pessoa': resultados_pessoa,
+            'resultados_grupo': resultados_grupo,
+            'busca': busca,
+        }
+
+        return render(request, 'resultado_pesquisa.html', context)

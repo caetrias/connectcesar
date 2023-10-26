@@ -14,4 +14,5 @@ urlpatterns = [
     path('emailinvalido/', views.emailinvalido, name="emailinvalido"),
     path('senhaincorreta/', views.senhaincorreta, name="senhaincorreta"),
     path('grupo_invalido/', views.grupo_invalido, name="grupo_invalido"),
+    path('resultado_pesquisa/', views.resultado_pesquisa, name='resultado_pesquisa'),
 ]

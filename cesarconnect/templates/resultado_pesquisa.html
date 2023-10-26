@@ -1,0 +1,19 @@
+<h2>Resultados da pesquisa para "{{ query }}"</h2>
+
+<h3>Usuários Encontrados:</h3>
+<ul>
+    {% for pessoa in resultados_pessoa %}
+        <li>{{ pessoa.nome }}</li>
+    {% empty %}
+        <li>Nenhum usuário encontrado.</li>
+    {% endfor %}
+</ul>
+
+<h3>Grupos Encontrados:</h3>
+<ul>
+    {% for grupo in resultados_grupo %}
+        <li>{{ grupo.nome_grupo }}</li>
+    {% empty %}
+        <li>Nenhum grupo encontrado.</li>
+    {% endfor %}
+</ul>
