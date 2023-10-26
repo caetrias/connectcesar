@@ -53,8 +53,10 @@ def tela_inicial(request):
         pessoa_id = request.session['pessoa_id']
         pessoa = Pessoa.objects.get(id_usuario=pessoa_id)
         nome_usuario = pessoa.nome
+        reps = [1, 2, 3]
         context = {
-            'nome_usuario': nome_usuario
+            'nome_usuario': nome_usuario,
+            'repeticoes': reps
         }
         return render(request, 'tela_inicial.html', context)
     else:
@@ -136,4 +138,4 @@ def senhaincorreta(request):
     return render(request, 'senhaincorreta.html')
 
 def grupo_invalido(request):
-    return render(request, 'grupoinvalido.html')
+    return render(request, 'grupo_invalido.html')
