@@ -12,14 +12,17 @@ driver = webdriver.Chrome()
 # Navega para a página desejada
 driver.get('http://127.0.0.1:8000/')
 wait = WebDriverWait(driver, 10)
-time.sleep(3)
-#input_element = wait.until(EC.presence_of_element_located((By.ID, 'exampleInputEmail1')))
+time.sleep(1)
+#visualiza o input e escreve nele 
 input_element = driver.find_element(By.ID, 'exampleInputEmail1')
 input_element.click()
 input_element.send_keys('edu@gmail.com' + Keys.RETURN)
-time.sleep(3)
+time.sleep(1)
+#visualiza o input e escreve nele 
 input_element2 = wait.until(EC.presence_of_element_located((By.ID, 'exampleInputPassword1')))
 input_element2.click()
 input_element2.send_keys('1234' + Keys.RETURN)
-time.sleep(3)
+time.sleep(1)
 driver.quit()
+
+
