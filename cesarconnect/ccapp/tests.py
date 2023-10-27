@@ -22,9 +22,8 @@ class Historia11(LiveServerTestCase):
        input_element2.click()
        input_element2.send_keys('1234' + Keys.RETURN)
        time.sleep(3)
-       driver.quit()
+       #driver.quit()
     def tese_001_cenario1(self):
-        
-        input_element = driver.find_element(By.ID, 'botao_perfil'  + Keys.RETURN)
-        input_element.click()
+        input_element3 = driver.find_element(By.ID, 'botao_perfil'  + Keys.RETURN)
+        input_element3.click()
         time.sleep(1)
