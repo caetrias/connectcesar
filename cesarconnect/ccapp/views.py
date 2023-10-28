@@ -154,3 +154,17 @@ def resultado_pesquisa(request):
         }
 
         return render(request, 'resultado_pesquisa.html', context)
+    
+def acesso_pessoa(request, id_field):
+    id_pessoa = Pessoa.objects.get(id_usuario = id_field)
+    context = {'pessoa': id_pessoa}
+    return render(request, 'acesso_pesquisa.html', context)
+
+def acesso_grupo(request, id_field):
+    grupo_id = Grupo.objects.get(id_grupo = id_field)
+    criador_grupo = Pessoa.objects.filter(grupo_criado_id = grupo_id)
+    context = {
+        'grupo': grupo_id,
+        'criador' : criador_grupo
+    }
+    return render(request, 'acesso_pesquisa.html', context)

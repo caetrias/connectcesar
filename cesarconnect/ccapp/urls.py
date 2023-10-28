@@ -15,4 +15,6 @@ urlpatterns = [
     path('senhaincorreta/', views.senhaincorreta, name="senhaincorreta"),
     path('grupo_invalido/', views.grupo_invalido, name="grupo_invalido"),
     path('resultado_pesquisa/', views.resultado_pesquisa, name='resultado_pesquisa'),
+    path('acesso/pessoa/<int:id_field>/', views.acesso_pessoa, name='acesso_pessoa'),
+    path('acesso/grupo/<int:id_field>/', views.acesso_grupo, name='acesso_grupo'),
 ]
