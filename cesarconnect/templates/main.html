@@ -17,11 +17,16 @@
         text-align: center;
     }
 
+    html{
+        height: 100%;
+    }
+
     body {
         padding-top: 80px;
-        background-image: linear-gradient(
-          #F6751F, rgb(183, 98, 23)
-        );
+        min-height: 100%;
+        margin: 0;
+        background: linear-gradient(rgb(246, 117, 31), rgb(183, 98, 23), rgba(183, 98, 23, 0.7));
+        background-attachment: fixed;
     }
 
     .circle{
@@ -196,6 +201,34 @@
 
     .customize-input{
         max-width: 500px;
+    }
+
+    .custom-card {
+        background-color: #8F8E8E;
+        width: 80%;
+        padding: 22px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+      }
+
+    .custom-name{
+        font-size: x-large;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+      }
+
+    .custom-img {
+        background: #D9D9D9 no-repeat center;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
     }
 
     </style>

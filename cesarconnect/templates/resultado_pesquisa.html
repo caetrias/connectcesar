@@ -1,19 +1,36 @@
-<h2>Resultados da pesquisa para "{{ query }}"</h2>
+{% include "navbar.html" %}
+{% include "main.html" %}
 
-<h3>Usuários Encontrados:</h3>
-<ul>
-    {% for pessoa in resultados_pessoa %}
-        <li>{{ pessoa.nome }}</li>
-    {% empty %}
-        <li>Nenhum usuário encontrado.</li>
-    {% endfor %}
-</ul>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 d-flex flex-column align-items-center">
+            {% if resultados_pessoa %}
+            <h2 class="text-center"> USUÁRIOS: </h2> <br>
+            {% for pessoa in resultados_pessoa %}
+            <div class="custom-card my-2">
+                <img class="custom-img">
+                <div class="custom-name"> {{ pessoa.nome }} </div>
+            </div>
+            <br>
+            {% endfor %}
+            {% else %} 
+            <h2 class="text-center"> USUÁRIO NÃO ENCONTRADO!! </h2>
+            {% endif %}
+        </div>
 
-<h3>Grupos Encontrados:</h3>
-<ul>
-    {% for grupo in resultados_grupo %}
-        <li>{{ grupo.nome_grupo }}</li>
-    {% empty %}
-        <li>Nenhum grupo encontrado.</li>
-    {% endfor %}
-</ul>
+        <div class="col-md-6 d-flex flex-column align-items-center">
+            {% if resultados_grupo %}
+            <h2 class="text-center"> GRUPOS: </h2> <br>
+            {% for grupo in resultados_grupo %}
+            <div class="custom-card my-2">
+                <img class="custom-img">
+                <div class="custom-name"> {{ grupo.nome_grupo }} </div>
+            </div>
+            <br>
+            {% endfor %}
+            {% else %} 
+            <h2 class="text-center"> GRUPO NÃO ENCONTRADO!! </h2>
+            {% endif %}
+        </div>
+    </div>
+</div>
