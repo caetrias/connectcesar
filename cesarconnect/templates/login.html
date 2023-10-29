@@ -1,23 +1,44 @@
 {% include "main.html" %}
 
-    <div class="container" style="background-color: #b8b7b7; padding: 35px; padding-bottom: 90px; width: 800px;">
-        <hr>
-        <form action="{% url 'login' %}" method="POST">
-          {% csrf_token %}
-          <div class="mb-3">
-            <h1 class="login">LOGIN</h1>
-            <label for="exampleInputEmail1" class="form-label">EMAIL</label>
-            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-            <div id="emailHelp" class="form-text"></div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">SENHA</label>
-            <input type="password" name="senha" class="form-control" id="exampleInputPassword1" required>
-          </div>
-          <div class="mb-3 form-check">
-            
-          </div>
-          <button class="form-control-sm">Entrar</button>
-          <a href="cadastro/"><button type="button" class="btn btn-warning"> CRIAR CONTA</button></a>
-        </form>
-      </div>
+<div
+  class="container"
+  style="
+    background-color: #b8b7b7;
+    padding: 35px;
+    padding-bottom: 90px;
+    width: 800px;
+  "
+>
+  <hr />
+  <form action="{% url 'login' %}" method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <h1 class="login">LOGIN</h1>
+      <label for="exampleInputEmail1" class="form-label">EMAIL</label>
+      <input
+        type="email"
+        name="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        required
+      />
+      <div id="emailHelp" class="form-text"></div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">SENHA</label>
+      <input
+        type="password"
+        name="senha"
+        class="form-control"
+        id="exampleInputPassword1"
+        required
+      />
+    </div>
+    <div class="mb-3 form-check"></div>
+    <button class="form-control-sm">Entrar</button>
+    <a href="cadastro/"
+      ><button type="button" class="btn btn-warning">CRIAR CONTA</button></a
+    >
+  </form>
+</div>
