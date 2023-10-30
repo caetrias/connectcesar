@@ -17,4 +17,7 @@ urlpatterns = [
     path('resultado_pesquisa/', views.resultado_pesquisa, name='resultado_pesquisa'),
     path('acesso/pessoa/<int:id_field>/', views.acesso_pessoa, name='acesso_pessoa'),
     path('acesso/grupo/<int:id_field>/', views.acesso_grupo, name='acesso_grupo'),
+    path('grupo_nao_pertence/', views.grupo_nao_pertence, name='grupo_nao_pertence'),
+    path('grupo_sem_acesso/', views.grupo_sem_acesso, name='grupo_sem_acesso'),
+    path('grupo_inexistente/', views.grupo_inexistente, name='grupo_inexistente'),
 ]
