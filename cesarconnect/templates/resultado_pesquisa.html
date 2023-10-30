@@ -9,7 +9,7 @@
             {% for pessoa in resultados_pessoa %}
             <div class="custom-card my-2">
                 <img class="custom-img">
-                <a href="{% url "acesso_pessoa" pessoa.id_usuario %}" class="custom-name" style="color: #000000"> {{ pessoa.nome }} </a>
+                <a href="{% url "acesso_pessoa" pessoa.id_usuario %}" id = "usuario_encontrado" class="custom-name" style="color: #000000"> {{ pessoa.nome }} </a>
             </div>
             <br>
             {% endfor %}
@@ -24,7 +24,7 @@
             {% for grupo in resultados_grupo %}
             <div class="custom-card my-2">
                 <img class="custom-img">
-                <a href="{% url "acesso_grupo" grupo.id_grupo %}" class="custom-name" style="color: #000000"> {{ grupo.nome_grupo }} </a>
+                <a href="{% url "acesso_grupo" grupo.id_grupo %}" id = "grupo_encontrado" class="custom-name" style="color: #000000"> {{ grupo.nome_grupo }} </a>
             </div>
             <br>
             {% endfor %}
