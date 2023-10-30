@@ -1,36 +1,85 @@
-{% include "navbar.html" %}
-{% include "main.html" %}
+{% include "navbar.html" %} {% include "main.html" %}
 
-  <h1 class="meugrupo"  style="text-align: center;">{{ grupo.nome_grupo }}</h1>
+<h1 class="meugrupo" style="text-align: center">{{ grupo.nome_grupo }}</h1>
 
-  <!-- retângulo que contém as informações da página-->
-  <div style="background-color: #b8b7b7; padding: 20px; border-radius: 10px; max-width: 1300px; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-between; height: 550px;">
-    <div style="display: flex; flex-direction:column; align-items: flex-start;">
-    <h3 style="margin-left: 20px;">DESCRIÇÃO</h3> <!-- área onde ficará a descrição do grupo-->
-    <div style="background-color: white; width: 750px; height: 100px; border-radius: 10px; margin-left: 20px;">
-    {{grupo.descricao_grupo}}
+<!-- retângulo que contém as informações da página-->
+<div
+  style="
+    background-color: #b8b7b7;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 550px;
+  "
+>
+  <div style="display: flex; flex-direction: column; align-items: flex-start">
+    <h3 style="margin-left: 20px">DESCRIÇÃO</h3>
+    <!-- área onde ficará a descrição do grupo-->
+    <div
+      style="
+        background-color: white;
+        width: 750px;
+        height: 100px;
+        border-radius: 10px;
+        margin-left: 20px;
+      "
+    >
+      {{grupo.descricao_grupo}}
     </div>
-    
-    <br>
 
-    <h3 style="margin-left: 20px;">POSTAGENS</h3> <!-- área onde ficarão as postagens do grupo-->
-    <div style="background-color: white; width: 750px; height: 323px; border-radius: 10px; margin-left: 20px;"></div>
+    <br />
+
+    <h3 style="margin-left: 20px">POSTAGENS</h3>
+    <!-- área onde ficarão as postagens do grupo-->
+    <div
+      style="
+        background-color: white;
+        width: 750px;
+        height: 323px;
+        border-radius: 10px;
+        margin-left: 20px;
+      "
+    ></div>
   </div>
 
   <!-- área de participantes do grupo-->
-    <div style="background-color: white; width: 325px; height: 300px; border-radius: 10px; padding: 20px;">
-      <h3>PARTICIPANTES</h3>
-      <div class="participant">
-        <img src="http://avatars.dicebear.com/api/open-peeps/stefan.svg" alt="Você">
-        <p>{{ nome_usuario }}</p>
-      </div>
-      <div class="participant">
-        <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Max" alt="Participante 2">
-        <p>Max</p>
+  <div
+    style="
+      background-color: white;
+      width: 325px;
+      height: 300px;
+      border-radius: 10px;
+      padding: 20px;
+    "
+  >
+    <h3>PARTICIPANTES</h3>
+    <div class="participant">
+      <img
+        src="http://avatars.dicebear.com/api/open-peeps/stefan.svg"
+        alt="Você"
+      />
+      <p>{{ nome_usuario }}</p>
     </div>
-  
-<!-- botões-->
-  <div style="margin-top: 20px; text-align: center;">
-    <button type="button" class="btn btn-secondary" style="color: black;">Convidar Participantes</button>
-    <button type="button" class="btn btn-secondary" style="color: black;">Editar Grupo</button>
+    <div class="participant">
+      <img
+        src="https://api.dicebear.com/7.x/adventurer/svg?seed=Max"
+        alt="Participante 2"
+      />
+      <p>Max</p>
+    </div>
+
+    <!-- botões-->
+    <div style="margin-top: 20px; text-align: center">
+      <button type="button" class="btn btn-secondary" style="color: black">
+        Convidar Participantes
+      </button>
+      <button type="button" class="btn btn-secondary" style="color: black">
+        Editar Grupo
+      </button>
+    </div>
+  </div>
 </div>

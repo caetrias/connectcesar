@@ -1,35 +1,51 @@
-{% include "navbar.html" %}
-{% include "main.html" %}
+{% include "navbar.html" %} {% include "main.html" %}
 
-      <!-- Conteúdo principal da página -->
-      <div class="container text-center">
-        <div class="row align-items-start">
-          <!-- Coluna da esquerda para perfil -->
-          <div class="col-3">
-            <div class="d-flex justify-content-center mt-3 position-fixed">
-              <div class="card align-items-center justify-content-around" style="width: 300px; height: 400px; background-color: #b8b7b7;"> 
-                <!-- Imagem do perfil -->
-                <a href="/acessarperfil/"> <img class="card-img-top rounded-circle shadow bg-white" style="width: 150px" src="http://avatars.dicebear.com/api/open-peeps/stefan.svg" alt="..."> </a>
-                <!-- Nome do usuário -->
-                <h5>{{ nome_usuario }}</h5>
-                <!-- Botão para editar perfil -->
-                <a id = "botao_perfil" href="/editar_perfil/" class="btn btn-dark">Editar Perfil</a>
-              </div>
-            </div>
-          </div>
-          <!-- Coluna da direita para grupos -->
-          <div class="col-9">
-            <!-- Grupos -->
-            {% for i in repeticoes %}
-            <div class="d-flex justify-content-center mt-3"> 
-              <div class="card" style="width: 90%; height: 350px; background-color: #b8b7b7;">
-                <!-- Imagem do perfil dos grupos -->
-                <h5 class="group-name"> <br> <span class="white-circle"> </span>  
-                  Grupo {{i}} </h5>
-              </div> 
-            </div> <br> 
-            {% endfor %}
-
-          </div>
+<!-- Conteúdo principal da página -->
+<div class="container text-center">
+  <div class="row align-items-start">
+    <!-- Coluna da esquerda para perfil -->
+    <div class="col-3">
+      <div class="d-flex justify-content-center mt-3 position-fixed">
+        <div
+          class="card align-items-center justify-content-around"
+          style="width: 300px; height: 400px; background-color: #b8b7b7"
+        >
+          <!-- Imagem do perfil -->
+          <a href="/acessarperfil/">
+            <img
+              class="card-img-top rounded-circle shadow bg-white"
+              style="width: 150px"
+              src="http://avatars.dicebear.com/api/open-peeps/stefan.svg"
+              alt="..."
+            />
+          </a>
+          <!-- Nome do usuário -->
+          <h5>{{ nome_usuario }}</h5>
+          <!-- Botão para editar perfil -->
+          <a id="botao_perfil" href="/editar_perfil/" class="btn btn-dark"
+            >Editar Perfil</a
+          >
         </div>
       </div>
+    </div>
+    <!-- Coluna da direita para grupos -->
+    <div class="col-9">
+      <!-- Grupos -->
+      {% for i in repeticoes %}
+      <div class="d-flex justify-content-center mt-3">
+        <div
+          class="card"
+          style="width: 90%; height: 350px; background-color: #b8b7b7"
+        >
+          <!-- Imagem do perfil dos grupos -->
+          <h5 class="group-name">
+            <br />
+            <span class="white-circle"> </span> Grupo {{i}}
+          </h5>
+        </div>
+      </div>
+      <br />
+      {% endfor %}
+    </div>
+  </div>
+</div>

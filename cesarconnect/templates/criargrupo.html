@@ -1,51 +1,90 @@
-{% include "navbar.html" %}
-{% include "main.html" %}
+{% include "navbar.html" %} {% include "main.html" %}
 
-  <h1 class="criargrupo"  style="text-align: center;">CRIAÇÃO DE GRUPO</h1>
+<h1 class="criargrupo" style="text-align: center">CRIAÇÃO DE GRUPO</h1>
 
-  <!-- retângulo cinza que contém as informações-->
-  <div style="background-color: #b8b7b7; padding: 20px; border-radius: 10px; max-width: 1300px; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-between; height: 500px; padding-left: 150px;">
-    <div>
-    <div class="circle-upload"> <!-- círculo de adicionar foto-->
-    <label for="input-foto" class="circle-content">
+<!-- retângulo cinza que contém as informações-->
+<div
+  style="
+    background-color: #b8b7b7;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 500px;
+    padding-left: 150px;
+  "
+>
+  <div>
+    <div class="circle-upload">
+      <!-- círculo de adicionar foto-->
+      <label for="input-foto" class="circle-content">
         <span class="plus-sign">+</span>
         <div class="add-photo-text">Adicionar Foto</div>
-    </label>
-    <input type="file" id="input-foto" accept="image/*">
+      </label>
+      <input type="file" id="input-foto" accept="image/*" />
     </div>
   </div>
-  
-  <div class="right-section"> <!-- resto das informações da página-->
 
-      <div class="container">
+  <div class="right-section">
+    <!-- resto das informações da página-->
 
-        <form method="post" action="{% url 'criargrupo' %}">
-          {% csrf_token %}
-          <div class="mb-3">
-              <label for="formGroupExampleInput" class="form-label">Nome do Grupo</label>
-              <input type="text" class="form-control customize-input" id="formGroupExampleInput" name="nome_grupo">
-          </div>
-          <div class="mb-3">
-              <label for="formGroupExampleInput2" class="form-label">Descrição do Grupo</label>
-              <input type="text" class="form-control customize-input" style="height: 100px;" id="formGroupExampleInput2" name="descricao_grupo">
-          </div>
-          <div class="col-md-4">
-              <label for="inputState" class="form-label">Período</label>
-              <select id="inputState" class="form-select" style="width: 75px;" name="periodo">
-                <option selected></option>
-                <option>1º</option>
-                <option>2º</option>
-                <option>3º</option>
-                <option>4º</option>
-                <option>5º</option>
-                <option>6º</option>
-                <option>7º</option>
-                <option>8º</option>
-              </select>
-          </div>
-          <br>
-          <button type="submit" class="btn btn-primary" style="background-color:#808080 ; color: #000000;">Confirmar</button>
-        </form>
-        
+    <div class="container">
+      <form method="post" action="{% url 'criargrupo' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label"
+            >Nome do Grupo</label
+          >
+          <input
+            type="text"
+            class="form-control customize-input"
+            id="formGroupExampleInput"
+            name="nome_grupo"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label"
+            >Descrição do Grupo</label
+          >
+          <input
+            type="text"
+            class="form-control customize-input"
+            style="height: 100px"
+            id="formGroupExampleInput2"
+            name="descricao_grupo"
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Período</label>
+          <select
+            id="inputState"
+            class="form-select"
+            style="width: 75px"
+            name="periodo"
+          >
+            <option selected></option>
+            <option>1º</option>
+            <option>2º</option>
+            <option>3º</option>
+            <option>4º</option>
+            <option>5º</option>
+            <option>6º</option>
+            <option>7º</option>
+            <option>8º</option>
+          </select>
+        </div>
+        <br />
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="background-color: #808080; color: #000000"
+        >
+          Confirmar
+        </button>
+      </form>
     </div>
   </div>
+</div>

@@ -145,6 +145,9 @@
   <li>
     <a href="https://docs.google.com/document/d/1HMgFS6grvc7ghHJqa_3I_6-wmORn5KY4ejPAV3zUSWQ/edit">Programação em Par</a>
   </li>
+  <li>
+    <a href="https://drive.google.com/file/d/1tWGRZJJHDdicarxU_Uurw_UfHnUOOzM9/view?usp=sharing">Diagrama de Atividades</a>
+  </li>
 </ul>
 
 <p align="center">

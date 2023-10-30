@@ -1,75 +1,167 @@
-{% include "navbar.html" %}
-{% include "main.html" %}
+{% include "navbar.html" %} {% include "main.html" %}
 
-      <!-- Container principal -->
-      <div class="container text-center mt-1 mb-5">
-        <!-- Título da página -->
-        <h2 class="editarperfil" style="text-align: center;">EDITAR PERFIL</h2>  
-        <!-- Container cinza que contém os campos de edição -->
-        <div class="row align-items-center" style="background-color: #b8b7b7; border-radius: 10px; max-width: 1100px; margin: 0 auto; flex-direction: row; justify-content: space-between; height: 550px;">
-            <!-- Seção da esquerda para upload de foto -->
-            <div class="col-5">
-                <!-- Área de upload de foto -->
-                <div class="circle-upload mx-auto" style="width: 175px; height: 175px; background-color: #D9D9D9; border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: cente; margin-top: 20px; cursor: pointer;"> 
-                    <label for="input-foto" class="circle-content"> 
-                        <span class="plus-sign" style="font-size: 24px; font-weight: bold; margin-top: -10px;">+</span>
-                        <div class="add-photo-text" style="margin-top: 5px text-align: center">Adicionar Foto</div>
-                        <!-- Input escondido para seleção de imagem -->
-                        <input type="file" id="input-foto" accept="image/*" style="display: none">
-                    </label>
-                </div> <br>
-                <!-- Campo para informar qualidades e características -->
-                <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">INFORME  SUAS QUALIDADES E CARACTERISTICAS</label>
-                    <input type="text" class="form-control custom-input" style="margin-left: 20px; height: 195px; width: 415px; background-color: #7D7D7D; border: 1px solid black;" id="formGroupExampleInput2">
-                </div>
-            </div>
-
-            <!-- Seção da direita para outros campos de edição -->
-            <div class="col-7"> 
-                <!-- Campo para nome completo -->
-                <div class="mb-3 mx-auto" style="width: 410px;">
-                    <label for="formGroupExampleInput" class="form-label custom-label">NOME COMPLETO</label>
-                    <input type="text" class="form-control custom-input" id="formGroupExampleInput">
-                  </div>
-
-                  <!-- Campo para idade -->
-                  <div class="mb-3 mx-auto" style="width: 410px;">
-                    <label for="formGroupExampleInput" class="form-label custom-label">IDADE</label>
-                    <input type="text" class="form-control custom-input" id="formGroupExampleInput">
-                  </div>
-
-                  <!-- Campo dropdown para período -->
-                  <div class="mb-3 mx-auto" style="width: 410px;">
-                    <label for="formGroupExampleInput" class="form-label custom-label">PERIODO</label>
-                    <select id="inputState" class="form-select custom-input">
-                        <option selected></option>
-                        <option>1º</option>
-                        <option>2º</option>
-                        <option>3º</option>
-                        <option>4º</option>
-                        <option>5º</option>
-                        <option>6º</option>
-                        <option>7º</option>
-                        <option>8º</option>
-                      </select>
-                  </div>
-
-                  <!-- Campo para curso -->
-                  <div class="mb-3 mx-auto" style="width: 410px;">
-                    <label for="formGroupExampleInput" class="form-label custom-label">CURSO</label>
-                    <input type="text" class="form-control custom-input" id="formGroupExampleInput">
-                  </div>
-
-                  <!-- Campo para MBTI -->
-                  <div class="mb-3 mx-auto" style="width: 410px;">
-                    <label for="formGroupExampleInput" class="form-label custom-label">MBTI</label>
-                    <input type="text" class="form-control custom-input" id="formGroupExampleInput">
-                  </div> <br>
-
-                  <!-- Botão de confirmação -->
-                  <a href="/tela_inicial/"> <button type="button" class="btn btn-dark" style="background-color:#808080; color: #000000; width: 140px; height: 40px;">Confirmar</button> </a>
-
-            </div>
-        </div>
+<!-- Container principal -->
+<div class="container text-center mt-1 mb-5">
+  <!-- Título da página -->
+  <h2 class="editarperfil" style="text-align: center">EDITAR PERFIL</h2>
+  <!-- Container cinza que contém os campos de edição -->
+  <div
+    class="row align-items-center"
+    style="
+      background-color: #b8b7b7;
+      border-radius: 10px;
+      max-width: 1100px;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 550px;
+    "
+  >
+    <!-- Seção da esquerda para upload de foto -->
+    <div class="col-5">
+      <!-- Área de upload de foto -->
+      <div
+        class="circle-upload mx-auto"
+        style="
+          width: 175px;
+          height: 175px;
+          background-color: #d9d9d9;
+          border-radius: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: cente;
+          margin-top: 20px;
+          cursor: pointer;
+        "
+      >
+        <label for="input-foto" class="circle-content">
+          <span
+            class="plus-sign"
+            style="font-size: 24px; font-weight: bold; margin-top: -10px"
+            >+</span
+          >
+          <div
+            class="add-photo-text"
+            style="margin-top: 5px text-align: center"
+          >
+            Adicionar Foto
+          </div>
+          <!-- Input escondido para seleção de imagem -->
+          <input
+            type="file"
+            id="input-foto"
+            accept="image/*"
+            style="display: none"
+          />
+        </label>
+      </div>
+      <br />
+      <!-- Campo para informar qualidades e características -->
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label"
+          >INFORME SUAS QUALIDADES E CARACTERISTICAS</label
+        >
+        <input
+          type="text"
+          class="form-control custom-input"
+          style="
+            margin-left: 20px;
+            height: 195px;
+            width: 415px;
+            background-color: #7d7d7d;
+            border: 1px solid black;
+          "
+          id="qualidades_usuario"
+        />
+      </div>
     </div>
+
+    <!-- Seção da direita para outros campos de edição -->
+    <div class="col-7">
+      <!-- Campo para nome completo -->
+      <div class="mb-3 mx-auto" style="width: 410px">
+        <label for="formGroupExampleInput" class="form-label custom-label"
+          >NOME COMPLETO</label
+        >
+        <input
+          type="text"
+          class="form-control custom-input"
+          id="nome_usuario"
+        />
+      </div>
+
+      <!-- Campo para idade -->
+      <div class="mb-3 mx-auto" style="width: 410px">
+        <label for="formGroupExampleInput" class="form-label custom-label"
+          >IDADE</label
+        >
+        <input
+          type="text"
+          class="form-control custom-input"
+          id="idade_usuario"
+        />
+      </div>
+
+      <!-- Campo dropdown para período -->
+      <div class="mb-3 mx-auto" style="width: 410px">
+        <label for="formGroupExampleInput" class="form-label custom-label"
+          >PERIODO</label
+        >
+        <select id="periodo_usuario" class="form-select custom-input">
+          <option selected></option>
+          <option>1º</option>
+          <option>2º</option>
+          <option>3º</option>
+          <option>4º</option>
+          <option>5º</option>
+          <option>6º</option>
+          <option>7º</option>
+          <option>8º</option>
+        </select>
+      </div>
+
+      <!-- Campo para curso -->
+      <div class="mb-3 mx-auto" style="width: 410px">
+        <label for="formGroupExampleInput" class="form-label custom-label"
+          >CURSO</label
+        >
+        <input
+          type="text"
+          class="form-control custom-input"
+          id="curso_usuario"
+        />
+      </div>
+
+      <!-- Campo para MBTI -->
+      <div class="mb-3 mx-auto" style="width: 410px">
+        <label for="formGroupExampleInput" class="form-label custom-label"
+          >MBTI</label
+        >
+        <input
+          type="text"
+          class="form-control custom-input"
+          id="mbti_usuario"
+        />
+      </div>
+      <br />
+
+      <!-- Botão de confirmação -->
+      <a href="/tela_inicial/">
+        <button
+          type="button"
+          class="btn btn-dark"
+          id="botao_confirmar"
+          style="
+            background-color: #808080;
+            color: #000000;
+            width: 140px;
+            height: 40px;
+          "
+        >
+          Confirmar
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
