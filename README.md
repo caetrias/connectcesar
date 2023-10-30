@@ -146,7 +146,7 @@
     <a href="https://docs.google.com/document/d/1HMgFS6grvc7ghHJqa_3I_6-wmORn5KY4ejPAV3zUSWQ/edit">Programação em Par</a>
   </li>
   <li>
-    <a href="file:///C:/Users/igora/Downloads/Diagrama%20de%20Atividades%20.pdf">Programação em Par</a>
+    <a href="file:///C:/Users/igora/Downloads/Diagrama%20de%20Atividades%20.pdf">Diagrama de Atividades</a>
   </li>
 </ul>
 
