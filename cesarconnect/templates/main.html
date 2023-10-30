@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&family=Merriweather:wght@300&family=Roboto:wght@900&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>ConnectCESAR</title>
+
+    <style>
+      h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        text-align: center;
+      }
+
+      html {
+        height: 100%;
+      }
+
+      body {
+        padding-top: 80px;
+        min-height: 100%;
+        margin: 0;
+        background: linear-gradient(
+          rgb(246, 117, 31),
+          rgb(183, 98, 23),
+          rgba(183, 98, 23, 0.7)
+        );
+        background-attachment: fixed;
+      }
+
+      .circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+
+      .group-name {
+        text-align: left;
+        padding-left: 15px;
+      }
+
+      .white-circle {
+        width: 70px;
+        height: 70px;
+        background-color: white;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .login {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .editarperfil {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .custom-input {
+        height: 34px;
+        width: 410px;
+        background-color: #7d7d7d;
+        border: 1px solid black;
+      }
+
+      .custom-label {
+        display: block;
+        text-align: left;
+        margin-bottom: 5px;
+      }
+
+      .cadastro {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .profile-links {
+        background-color: #b8b7b7;
+        padding: 30px 20px;
+        text-align: center;
+        margin: 100px 70px 0 70px;
+        border-radius: 10px;
+      }
+
+      .profile-links img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-bottom: 25px;
+      }
+
+      .profile-links li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      media (max-width:1200px) {
+        .mt-custum {
+          margin-top: 50px;
+        }
+        .profile-links {
+          background-color: #b8b7b7;
+          padding: 30px 20px;
+          text-align: center;
+          margin: 50px 50px 0 50px;
+          border-radius: 10px;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .mt-custum {
+          margin-top: 20px;
+        }
+        .profile-links {
+          background-color: #b8b7b7;
+          padding: 30px 20px;
+          text-align: center;
+          margin: 20px 0 0 0;
+          border-radius: 10px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .profile-links li {
+          margin: 0;
+        }
+        .profile-links img {
+          margin-bottom: 10px;
+        }
+        .mt-custum .details {
+          padding: 10px;
+        }
+      }
+
+      .participant {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .participant img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .meugrupo {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .circle-upload {
+        width: 175px;
+        height: 175px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-top: 50px;
+      }
+
+      #input-foto {
+        display: none;
+      }
+
+      .plus-sign {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: -10px;
+      }
+
+      .add-photo-text {
+        margin-top: 5px;
+        text-align: center;
+      }
+
+      .circle-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .right-section {
+        flex: 1;
+        padding: 20px;
+        padding-left: 150px;
+      }
+
+      .criargrupo {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .customize-input {
+        max-width: 500px;
+      }
+
+      .custom-card {
+        background-color: #8f8e8e;
+        width: 80%;
+        padding: 22px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .custom-name {
+        font-size: x-large;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+      }
+
+      .custom-img {
+        background: #d9d9d9 no-repeat center;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+      }
+    </style>
+  </head>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>

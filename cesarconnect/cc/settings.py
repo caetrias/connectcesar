@@ -22,7 +22,7 @@ load_dotenv(BASE_DIR / '.env')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-TARGET_ENV = os.getenv('TARGET_ENV')
+TARGET_ENV = os.getenv('TARGET_ENV', 'Dev')
 NOT_PROD = not TARGET_ENV.lower().startswith('prod')
 
 if NOT_PROD:
@@ -63,7 +63,7 @@ SECRET_KEY = 'django-insecure-cr-tpeslb8&k!!5osugw*9o=nj##4vnj$=)a+^q5p$-@+^901&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["connectcesar.azurewebsites.net"]
+ALLOWED_HOSTS = ["connectcesar.azurewebsites.net", "127.0.0.1"]
 
 
 # Application definition

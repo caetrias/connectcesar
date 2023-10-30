@@ -2,8 +2,8 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Perfil
-from .models import Usuario
+from .models import Grupo
+from .models import Pessoa
 
-admin.site.register(Perfil)
-admin.site.register(Usuario)
+admin.site.register(Grupo)
+admin.site.register(Pessoa)

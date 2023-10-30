@@ -1,75 +1,27 @@
-<style>
-    h1 {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 40px;
-      text-align: center;
-    }
-    
-    .container {
-      background-color: #b8b7b7;
-      padding: 35px;
-      padding-bottom: 90px;
-      width: 800px;
-      display: flex;
-      flex-direction: column; /* Alinhar verticalmente os itens no centro */
-      justify-content: center; /* Alinhar horizontalmente os itens no centro */
-      align-items: center; /* Alinhar verticalmente os itens no centro */
-    }
-    
-    body {
-      background-color: #eb7424e3;
-    }
-    
-    /* Adicione espaçamento superior para a div da imagem e para o botão */
-    .container > div,
-    button {
-      margin-top: 20px;
-    }
-    </style>
-    
-  <!doctype html>
-  
-  <html lang="pt-br">
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      
-      <title>CESARConnect</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-      <style>
-      h1{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 40px;
-        text-align: center;
-  
-      }
-      .container{
-        background-color: #b8b7b7;
-        padding: 35px;
-        padding-bottom: 90px;   
-        width: 800px; 
-    }
-     body{
-      background-color: #eb7424e3;
-     }
-      </style>
-    </head>
-    <body>
-     
-  
-  
-  
-  {% include 'navbar.html' %}
-      
-      <div class="container">
-          
-        <h1>Grupo já cadastrado</h1>
-        <div style=" align-items: center;">
-        <img src="https://img.freepik.com/icones-gratis/aviso_318-519201.jpg" width="200" />
-        </div>
-        <br>
-        <a href="{% url 'criargrupo' %}" ><button type="button" class="btn btn-secondary">Voltar</button></a>
-        </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    </body>
-  </html>
+{% include "main.html" %}
+
+<div
+  class="container"
+  style="
+    background-color: #b8b7b7;
+    padding: 35px;
+    padding-bottom: 90px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <h1>Grupo já cadastrado</h1>
+  <div style="align-items: center">
+    <img
+      src="https://img.freepik.com/icones-gratis/aviso_318-519201.jpg"
+      width="200"
+    />
+  </div>
+  <br />
+  <a href="{% url 'criargrupo' %}"
+    ><button type="button" class="btn btn-secondary">Voltar</button></a
+  >
+</div>

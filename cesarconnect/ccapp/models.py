@@ -1,32 +1,13 @@
 from django.db import models
 
 # Create your models here
-
-# class Login(models.Model):
-#     #email = 
-#     nome = models.CharField(max_length=200)
-#     #senha = 
-
-class Perfil(models.Model):   #NAO UTILIZAR ESSE MODEL - FOI USADO COMO TESTE - DESCOBRIR COMO DESINSTALAR
-    nome = models.CharField(max_length=200)
-    descricao = models.TextField(null=True, blank=True)
-    criado = models.DateTimeField(auto_now_add=True)
-    atualizado = models.DateTimeField(auto_now=True)
-    
-    def __str__(self):
-        return self.nome
-
-class Usuario(models.Model): 
-    id_usuario = models.AutoField(primary_key=True) 
-    nome = models.CharField(max_length=200)
-    email = models.CharField(max_length=200)
-    senha = models.CharField(max_length=200)
-    descricao = models.TextField(null=True, blank=True)
-    criado = models.DateTimeField(auto_now_add=True)
-    atualizado = models.DateTimeField(auto_now=True)
-    
-    def __str__(self):
-        return self.nome
+class Grupo(models.Model):
+    id_grupo = models.AutoField(primary_key=True)
+    nome_grupo = models.CharField(max_length=255)
+    descricao_grupo = models.TextField()
+    periodo = models.CharField(max_length=255)
+    criado_em = models.DateTimeField(auto_now_add=True)
+    atualizado_em = models.DateTimeField(auto_now=True)
 
 class Pessoa(models.Model):
     id_usuario = models.AutoField(primary_key=True)
@@ -36,11 +17,4 @@ class Pessoa(models.Model):
     descricao = models.TextField(null=True, blank=True)
     criado = models.DateTimeField(auto_now_add=True)
     atualizado = models.DateTimeField(auto_now=True)
-    
-class Grupo(models.Model):
-    id_grupo = models.AutoField(primary_key=True)
-    nome_grupo = models.CharField(max_length=255)
-    descricao_grupo = models.TextField()
-    periodo = models.CharField(max_length=255)
-    criado_em = models.DateTimeField(auto_now_add=True)
-    atualizado_em = models.DateTimeField(auto_now=True)
+    grupo_criado = models.ForeignKey(Grupo, null=True, blank=True, on_delete=models.SET_NULL)

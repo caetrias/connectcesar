@@ -1,0 +1,73 @@
+{% include "navbar.html" %}
+{% include "main.html" %}
+
+{% if pessoa %}
+<div class="container">
+    <!-- Container com Informacoes -->
+<div class="profile-links">
+        <img class="card-img-top rounded-circle shadow bg-white" style="width: 150px" src="http://avatars.dicebear.com/api/open-peeps/stefan.svg" alt="...">
+        <li><a style="font-size: 30px;">{{ pessoa.nome }}</a></li>
+        <li><a>2 periodo</a></li>
+        <h3 class="mt-5">Sobre Mim</h3>
+        <p class="text-justify">
+          👨‍🎓 Estudante universitário apaixonado por ciência da computação na Cesar School. 📚🎓
+           Explorando o mundo do conhecimento e buscando crescimento pessoal. 
+          💡 Sempre aberto a novas conexões e oportunidades de aprendizado. Vamos conversar! 
+          👋😊 #Aprendizado #Universidade #CrescimentoPessoal 🌟
+    </p>
+    </div>
+    </div>
+    <!-- Container Postagens -->
+    <div class="container">
+
+        <div class="profile-links">
+           
+            <li><a style="font-size: 70px;">Postagens</a></li>
+           
+                
+        </p>
+        </div>
+    </div>
+</div>
+</div>
+
+{% elif grupo %}
+
+<h1 class="meugrupo"  style="text-align: center;">{{ grupo.nome_grupo }}</h1>
+
+<!-- retângulo que contém as informações da página-->
+<div style="background-color: #b8b7b7; padding: 20px; border-radius: 10px; max-width: 1300px; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-between; height: 550px;">
+  <div style="display: flex; flex-direction:column; align-items: flex-start;">
+  <h3 style="margin-left: 20px;">DESCRIÇÃO</h3> <!-- área onde ficará a descrição do grupo-->
+  <div style="background-color: white; width: 750px; height: 100px; border-radius: 10px; margin-left: 20px;">
+  {{grupo.descricao_grupo}}
+  </div>
+  
+  <br>
+
+  <h3 style="margin-left: 20px;">POSTAGENS</h3> <!-- área onde ficarão as postagens do grupo-->
+  <div style="background-color: white; width: 750px; height: 323px; border-radius: 10px; margin-left: 20px;"></div>
+</div>
+
+<!-- área de participantes do grupo-->
+  <div style="background-color: white; width: 325px; height: 300px; border-radius: 10px; padding: 20px;">
+    <h3>PARTICIPANTES</h3>
+    {% for i in criador  %}
+        <div class="participant">
+          <img src="http://avatars.dicebear.com/api/open-peeps/stefan.svg" alt="Você">
+          <p>{{ i.nome }}</p>
+        </div>
+        {% endfor %}
+    <div class="participant">
+      <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Max" alt="Participante 2">
+      <p>Max</p>
+  </div>
+
+<!-- botões-->
+<div style="margin-top: 20px; text-align: center;">
+  <button type="button" class="btn btn-secondary" style="color: black;">Convidar Participantes</button>
+  <button type="button" class="btn btn-secondary" style="color: black;">Editar Grupo</button>
+</div>
+{% else %}
+    <p> INFORMAÇÃO NÃO DISPONÍVEL </p>
+{% endif %}

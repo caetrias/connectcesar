@@ -1,162 +1,167 @@
-<!-- Início do documento HTML -->
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Merriweather:wght@300&family=Roboto:wght@900&family=Young+Serif&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>ConnectCESAR</title>
+{% include "navbar.html" %} {% include "main.html" %}
 
-    <style> 
-        body {
-            padding-top: 14px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 100vh;
-            background-image: linear-gradient(
-          #F6751F, rgb(118, 65, 19)
-        );
-        }
-
-        .custom-label {
-            display: block;
-            text-align: left;
-            margin-bottom: 5px;
-        }
-
-        .custom-input{
-            height: 34px; 
-            width: 410px; 
-            background-color: #7D7D7D; 
-            border: 1px solid black;
-          }
-        .editarperfil{
-           font-family: 'Roboto', sans-serif;
-        }
-    </style>
-</head>
-<body>
-    <!-- Início da barra de navegação -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow mb-5 fixed-top">
-        <div class="container-fluid">
-          <!-- Logo da marca -->
-          <a class="navbar-brand" href="#">ConnectCESAR</a>
-          <!-- Botão para colapsar o menu em telas menores -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Itens do menu -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">  
-              <!-- Item Início -->
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/tela_inicial/">Início</a>
-              </li>
-              <!-- Item Criar Grupo -->
-              <li class="nav-item">
-                <a class="nav-link" href="/criargrupo/">Criar Grupo</a>
-              </li>
-              <!-- Dropdown do Perfil -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Perfil
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/acessarperfil/">Meu Perfil</a></li>
-                  <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/">Sair</a></li>
-                </ul>
-              </li>
-            </ul>
-            <!-- Formulário de busca -->
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+<!-- Container principal -->
+<div class="container text-center mt-1 mb-5">
+  <!-- Título da página -->
+  <h2 class="editarperfil" style="text-align: center">EDITAR PERFIL</h2>
+  <!-- Container cinza que contém os campos de edição -->
+  <div
+    class="row align-items-center"
+    style="
+      background-color: #b8b7b7;
+      border-radius: 10px;
+      max-width: 1100px;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 550px;
+    "
+  >
+    <!-- Seção da esquerda para upload de foto -->
+    <div class="col-5">
+      <!-- Área de upload de foto -->
+      <div
+        class="circle-upload mx-auto"
+        style="
+          width: 175px;
+          height: 175px;
+          background-color: #d9d9d9;
+          border-radius: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: cente;
+          margin-top: 20px;
+          cursor: pointer;
+        "
+      >
+        <label for="input-foto" class="circle-content">
+          <span
+            class="plus-sign"
+            style="font-size: 24px; font-weight: bold; margin-top: -10px"
+            >+</span
+          >
+          <div
+            class="add-photo-text"
+            style="margin-top: 5px text-align: center"
+          >
+            Adicionar Foto
           </div>
-        </div>
-      </nav> <br>
-
-      <!-- Container principal -->
-      <div class="container text-center mt-5 mb-5">
-        <!-- Título da página -->
-        <h1 class="editarperfil" style="text-align: center;">EDITAR PERFIL</h1>  
-        <!-- Container cinza que contém os campos de edição -->
-        <div class="row align-items-center" style="background-color: #b8b7b7; border-radius: 10px; max-width: 1100px; margin: 0 auto; flex-direction: row; justify-content: space-between; height: 550px;">
-            <!-- Seção da esquerda para upload de foto -->
-            <div class="col-5">
-                <!-- Área de upload de foto -->
-                <div class="circle-upload mx-auto" style="width: 175px; height: 175px; background-color: #D9D9D9; border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: cente; margin-top: 20px; cursor: pointer;"> 
-                    <label for="input-foto" class="circle-content"> 
-                        <span class="plus-sign" style="font-size: 24px; font-weight: bold; margin-top: -10px;">+</span>
-                        <div class="add-photo-text" style="margin-top: 5px text-align: center">Adicionar Foto</div>
-                        <!-- Input escondido para seleção de imagem -->
-                        <input type="file" id="input-foto" accept="image/*" style="display: none">
-                    </label>
-                </div> <br>
-                <!-- Campo para informar qualidades e características -->
-                <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">INFORME  SUAS QUALIDADES E CARACTERISTICAS</label>
-                    <input type="text" class="form-control custom-input" style="margin-left: 20px; height: 195px; width: 415px; background-color: #7D7D7D; border: 1px solid black;" id="formGroupExampleInput2">
-                </div>
-            </div>
-
-            <!-- Seção da direita para outros campos de edição -->
-            <div class="col-7"> 
-                <!-- Campo para nome completo -->
-                <div class="mb-3 mx-auto" style="width: 410px;">
-                    <label for="formGroupExampleInput" class="form-label custom-label">NOME COMPLETO</label>
-                    <input type="text" class="form-control custom-input" id="formGroupExampleInput">
-                  </div>
-
-                  <!-- Campo para idade -->
-                  <div class="mb-3 mx-auto" style="width: 410px;">
-                    <label for="formGroupExampleInput" class="form-label custom-label">IDADE</label>
-                    <input type="text" class="form-control custom-input" id="formGroupExampleInput">
-                  </div>
-
-                  <!-- Campo dropdown para período -->
-                  <div class="mb-3 mx-auto" style="width: 410px;">
-                    <label for="formGroupExampleInput" class="form-label custom-label">PERIODO</label>
-                    <select id="inputState" class="form-select custom-input">
-                        <option selected></option>
-                        <option>1º</option>
-                        <option>2º</option>
-                        <option>3º</option>
-                        <option>4º</option>
-                        <option>5º</option>
-                        <option>6º</option>
-                        <option>7º</option>
-                        <option>8º</option>
-                      </select>
-                  </div>
-
-                  <!-- Campo para curso -->
-                  <div class="mb-3 mx-auto" style="width: 410px;">
-                    <label for="formGroupExampleInput" class="form-label custom-label">CURSO</label>
-                    <input type="text" class="form-control custom-input" id="formGroupExampleInput">
-                  </div>
-
-                  <!-- Campo para MBTI -->
-                  <div class="mb-3 mx-auto" style="width: 410px;">
-                    <label for="formGroupExampleInput" class="form-label custom-label">MBTI</label>
-                    <input type="text" class="form-control custom-input" id="formGroupExampleInput">
-                  </div> <br>
-
-                  <!-- Botão de confirmação -->
-                  <a href="/tela_inicial/"> <button type="button" class="btn btn-dark" style="background-color:#808080; color: #000000; width: 140px; height: 40px;">Confirmar</button> </a>
-
-            </div>
-        </div>
+          <!-- Input escondido para seleção de imagem -->
+          <input
+            type="file"
+            id="input-foto"
+            accept="image/*"
+            style="display: none"
+          />
+        </label>
+      </div>
+      <br />
+      <!-- Campo para informar qualidades e características -->
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label"
+          >INFORME SUAS QUALIDADES E CARACTERISTICAS</label
+        >
+        <input
+          type="text"
+          class="form-control custom-input"
+          style="
+            margin-left: 20px;
+            height: 195px;
+            width: 415px;
+            background-color: #7d7d7d;
+            border: 1px solid black;
+          "
+          id="qualidades_usuario"
+        />
+      </div>
     </div>
-    
 
-</body>
+    <!-- Seção da direita para outros campos de edição -->
+    <div class="col-7">
+      <!-- Campo para nome completo -->
+      <div class="mb-3 mx-auto" style="width: 410px">
+        <label for="formGroupExampleInput" class="form-label custom-label"
+          >NOME COMPLETO</label
+        >
+        <input
+          type="text"
+          class="form-control custom-input"
+          id="nome_usuario"
+        />
+      </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</html>
+      <!-- Campo para idade -->
+      <div class="mb-3 mx-auto" style="width: 410px">
+        <label for="formGroupExampleInput" class="form-label custom-label"
+          >IDADE</label
+        >
+        <input
+          type="text"
+          class="form-control custom-input"
+          id="idade_usuario"
+        />
+      </div>
+
+      <!-- Campo dropdown para período -->
+      <div class="mb-3 mx-auto" style="width: 410px">
+        <label for="formGroupExampleInput" class="form-label custom-label"
+          >PERIODO</label
+        >
+        <select id="periodo_usuario" class="form-select custom-input">
+          <option selected></option>
+          <option>1º</option>
+          <option>2º</option>
+          <option>3º</option>
+          <option>4º</option>
+          <option>5º</option>
+          <option>6º</option>
+          <option>7º</option>
+          <option>8º</option>
+        </select>
+      </div>
+
+      <!-- Campo para curso -->
+      <div class="mb-3 mx-auto" style="width: 410px">
+        <label for="formGroupExampleInput" class="form-label custom-label"
+          >CURSO</label
+        >
+        <input
+          type="text"
+          class="form-control custom-input"
+          id="curso_usuario"
+        />
+      </div>
+
+      <!-- Campo para MBTI -->
+      <div class="mb-3 mx-auto" style="width: 410px">
+        <label for="formGroupExampleInput" class="form-label custom-label"
+          >MBTI</label
+        >
+        <input
+          type="text"
+          class="form-control custom-input"
+          id="mbti_usuario"
+        />
+      </div>
+      <br />
+
+      <!-- Botão de confirmação -->
+      <a href="/tela_inicial/">
+        <button
+          type="button"
+          class="btn btn-dark"
+          id="botao_confirmar"
+          style="
+            background-color: #808080;
+            color: #000000;
+            width: 140px;
+            height: 40px;
+          "
+        >
+          Confirmar
+        </button>
+      </a>
+    </div>
+  </div>
+</div>

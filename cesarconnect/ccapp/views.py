@@ -53,8 +53,10 @@ def tela_inicial(request):
         pessoa_id = request.session['pessoa_id']
         pessoa = Pessoa.objects.get(id_usuario=pessoa_id)
         nome_usuario = pessoa.nome
+        reps = [1, 2, 3, 4, 5]
         context = {
-            'nome_usuario': nome_usuario
+            'nome_usuario': nome_usuario,
+            'repeticoes': reps
         }
         return render(request, 'tela_inicial.html', context)
     else:
@@ -77,6 +79,11 @@ def criargrupo(request):
         novo_grupo.descricao_grupo = descricao_grupo
         novo_grupo.periodo = periodo
         novo_grupo.save()
+
+        pessoa = Pessoa.objects.get(id_usuario=request.session['pessoa_id'])
+
+        pessoa.grupo_criado = novo_grupo
+        pessoa.save()
         
         try:
             request.session['grupo_id'] = novo_grupo.id_grupo
@@ -100,12 +107,16 @@ def meugrupo(request):
         pessoa_id = request.session['pessoa_id']
         pessoa = Pessoa.objects.get(id_usuario=pessoa_id)
         nome_usuario = pessoa.nome
-        context = {
-            'nome_usuario': nome_usuario,
-            'grupo': grupo,
-        }
 
-    return render(request, 'meugrupo.html', context)
+        if pessoa.grupo_criado == grupo:
+            context = {
+                'nome_usuario': nome_usuario,
+                'grupo': grupo,
+            }
+            return render(request, 'meugrupo.html', context)
+        
+        return HttpResponse("Você não tem acesso ao grupo!")
+    
 
 def acessarperfil(request):
     if 'pessoa_id' in request.session:
@@ -127,4 +138,33 @@ def senhaincorreta(request):
     return render(request, 'senhaincorreta.html')
 
 def grupo_invalido(request):
-    return render(request, 'grupoinvalido.html')
+    return render(request, 'grupo_invalido.html')
+
+def resultado_pesquisa(request):
+    if request.method == "GET":
+        busca = request.GET.get("pesquisa")
+
+        resultados_pessoa = Pessoa.objects.filter(nome__icontains=busca)
+        resultados_grupo = Grupo.objects.filter(nome_grupo__icontains=busca)
+
+        context = {
+            'resultados_pessoa': resultados_pessoa,
+            'resultados_grupo': resultados_grupo,
+            'busca': busca,
+        }
+
+        return render(request, 'resultado_pesquisa.html', context)
+    
+def acesso_pessoa(request, id_field):
+    id_pessoa = Pessoa.objects.get(id_usuario = id_field)
+    context = {'pessoa': id_pessoa}
+    return render(request, 'acesso_pesquisa.html', context)
+
+def acesso_grupo(request, id_field):
+    grupo_id = Grupo.objects.get(id_grupo = id_field)
+    criador_grupo = Pessoa.objects.filter(grupo_criado_id = grupo_id)
+    context = {
+        'grupo': grupo_id,
+        'criador' : criador_grupo
+    }
+    return render(request, 'acesso_pesquisa.html', context)
