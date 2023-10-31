@@ -171,7 +171,7 @@
   </li>
   <li>
     <a
-      href="https://drive.google.com/drive/u/1/folders/1LQ0y_KFISJ82jDiSqOqyXtLVkm-Yw4I9"
+      href="https://drive.google.com/file/d/156j0OIhOYaN5MwGQdGsmeQW-YFkoDBJS/view?usp=drive_link"
       >Bug Tracker</a
     >
   </li>
