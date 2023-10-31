@@ -148,6 +148,12 @@
   <li>
     <a href="https://drive.google.com/file/d/1tWGRZJJHDdicarxU_Uurw_UfHnUOOzM9/view?usp=sharing">Diagrama de Atividades</a>
   </li>
+  <li>
+    <a href="https://drive.google.com/file/d/16twTmzdnlCoeb0uQoOahw3BQOWDS-a9E/view?usp=drive_link">Quadro Jira</a>
+  </li>
+  <li>
+    <a href="https://drive.google.com/file/d/1MH3TS5cuXy24nA9EN04qUSxoe_B1_Z_e/view?usp=drive_link">Backlog Jira</a>
+  </li>
 </ul>
 
 <p align="center">

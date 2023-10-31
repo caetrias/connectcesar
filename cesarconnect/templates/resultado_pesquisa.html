@@ -5,10 +5,10 @@
     <div class="row">
         <div class="col-md-6 d-flex flex-column align-items-center">
             {% if resultados_pessoa %}
-            <h2 class="text-center"> USUÁRIOS: </h2> <br>
+            <h2 class="text-center"> USUÁRIOS </h2> <hr>
             {% for pessoa in resultados_pessoa %}
             <div class="custom-card my-2">
-                <img class="custom-img">
+                <img class="custom-img" src="http://avatars.dicebear.com/api/open-peeps/stefan.svg">
                 <a href="{% url "acesso_pessoa" pessoa.id_usuario %}" id = "usuario_encontrado" class="custom-name" style="color: #000000"> {{ pessoa.nome }} </a>
             </div>
             <br>
@@ -20,10 +20,10 @@
 
         <div class="col-md-6 d-flex flex-column align-items-center">
             {% if resultados_grupo %}
-            <h2 class="text-center"> GRUPOS: </h2> <br>
+            <h2 class="text-center"> GRUPOS </h2> <hr>
             {% for grupo in resultados_grupo %}
             <div class="custom-card my-2">
-                <img class="custom-img">
+                <img class="custom-img" src="http://avatars.dicebear.com/api/open-peeps/stefan.svg">
                 <a href="{% url "acesso_grupo" grupo.id_grupo %}" id = "grupo_encontrado" class="custom-name" style="color: #000000"> {{ grupo.nome_grupo }} </a>
             </div>
             <br>

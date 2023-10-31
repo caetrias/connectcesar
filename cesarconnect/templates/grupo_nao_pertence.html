@@ -1,0 +1,27 @@
+{% include "main.html" %}
+
+<div
+  class="container"
+  style="
+    background-color: #b8b7b7;
+    padding: 35px;
+    padding-bottom: 90px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <h1>Você não está em nenhum grupo</h1>
+  <div style="align-items: center">
+    <img
+      src="https://img.freepik.com/icones-gratis/aviso_318-519201.jpg"
+      width="200"
+    />
+  </div>
+  <br />
+  <a href="{% url 'tela_inicial' %}"
+    ><button type="button" class="btn btn-secondary">Voltar</button></a
+  >
+</div>

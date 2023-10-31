@@ -53,10 +53,10 @@ def tela_inicial(request):
         pessoa_id = request.session['pessoa_id']
         pessoa = Pessoa.objects.get(id_usuario=pessoa_id)
         nome_usuario = pessoa.nome
-        reps = [1, 2, 3, 4, 5]
+        grupos = Grupo.objects.all()
         context = {
             'nome_usuario': nome_usuario,
-            'repeticoes': reps
+            'grupos' : grupos
         }
         return render(request, 'tela_inicial.html', context)
     else:
@@ -96,12 +96,12 @@ def meugrupo(request):
     grupo_id = request.session.get('grupo_id', None)
 
     if grupo_id is None:
-        return HttpResponse("Erro")
+        return render(request, 'grupo_nao_pertence.html')
     
     try:
         grupo = Grupo.objects.get(id_grupo=grupo_id)
     except Grupo.DoesNotExist:
-        return HttpResponse("Grupo não existe")
+        return render(request, 'grupo_inexistente.html')
     
     if 'pessoa_id' in request.session:
         pessoa_id = request.session['pessoa_id']
@@ -115,7 +115,7 @@ def meugrupo(request):
             }
             return render(request, 'meugrupo.html', context)
         
-        return HttpResponse("Você não tem acesso ao grupo!")
+        return render(request, 'grupo_sem_acesso.html')
     
 
 def acessarperfil(request):
@@ -139,6 +139,15 @@ def senhaincorreta(request):
 
 def grupo_invalido(request):
     return render(request, 'grupo_invalido.html')
+
+def grupo_nao_pertence(request):
+    return render(request, 'grupo_nao_pertence.html')
+
+def grupo_sem_acesso(request):
+    return render(request, 'grupo_sem_acesso.html')
+
+def grupo_inexistente(request):
+    return render(request, 'grupo_inexistente.html')
 
 def resultado_pesquisa(request):
     if request.method == "GET":

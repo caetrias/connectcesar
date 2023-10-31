@@ -31,20 +31,22 @@
     <!-- Coluna da direita para grupos -->
     <div class="col-9">
       <!-- Grupos -->
-      {% for i in repeticoes %}
+      {% for i in grupos %}
+      {% if i.nome_grupo %}
       <div class="d-flex justify-content-center mt-3">
         <div
           class="card"
-          style="width: 90%; height: 350px; background-color: #b8b7b7"
+          style="width: 90%; height: 350px; background-color: #b8b7b7; border-radius: 10px"
         >
           <!-- Imagem do perfil dos grupos -->
           <h5 class="group-name">
             <br />
-            <span class="white-circle"> </span> Grupo {{i}}
+            <img class="white-circle" src="http://avatars.dicebear.com/api/open-peeps/stefan.svg"> </img> {{i.nome_grupo}}
           </h5>
         </div>
       </div>
       <br />
+      {% endif %}
       {% endfor %}
     </div>
   </div>
