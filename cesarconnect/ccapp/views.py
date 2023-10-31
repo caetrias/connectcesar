@@ -53,10 +53,10 @@ def tela_inicial(request):
         pessoa_id = request.session['pessoa_id']
         pessoa = Pessoa.objects.get(id_usuario=pessoa_id)
         nome_usuario = pessoa.nome
-        reps = [1, 2, 3, 4, 5]
+        grupos = Grupo.objects.all()
         context = {
             'nome_usuario': nome_usuario,
-            'repeticoes': reps
+            'grupos' : grupos
         }
         return render(request, 'tela_inicial.html', context)
     else:
