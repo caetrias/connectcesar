@@ -140,21 +140,55 @@
 <p>Entrega 3</p>
 <ul>
   <li>
-    <a href="https://drive.google.com/file/d/1Udsy_FKkBAg6b-qUxlRGdzA6NvPUe9aw/view?usp=sharing">Screen Cast Lo-Fi</a>
+    <a
+      href="https://drive.google.com/file/d/1Udsy_FKkBAg6b-qUxlRGdzA6NvPUe9aw/view?usp=sharing"
+      >Screen Cast Lo-Fi</a
+    >
   </li>
   <li>
-    <a href="https://docs.google.com/document/d/1HMgFS6grvc7ghHJqa_3I_6-wmORn5KY4ejPAV3zUSWQ/edit">Programação em Par</a>
+    <a
+      href="https://docs.google.com/document/d/1HMgFS6grvc7ghHJqa_3I_6-wmORn5KY4ejPAV3zUSWQ/edit"
+      >Programação em Par</a
+    >
   </li>
   <li>
-    <a href="https://drive.google.com/file/d/1tWGRZJJHDdicarxU_Uurw_UfHnUOOzM9/view?usp=sharing">Diagrama de Atividades</a>
+    <a
+      href="https://drive.google.com/file/d/1tWGRZJJHDdicarxU_Uurw_UfHnUOOzM9/view?usp=sharing"
+      >Diagrama de Atividades</a
+    >
   </li>
   <li>
-    <a href="https://drive.google.com/file/d/16twTmzdnlCoeb0uQoOahw3BQOWDS-a9E/view?usp=drive_link">Quadro Jira</a>
+    <a
+      href="https://drive.google.com/file/d/16twTmzdnlCoeb0uQoOahw3BQOWDS-a9E/view?usp=drive_link"
+      >Quadro Jira</a
+    >
   </li>
   <li>
-    <a href="https://drive.google.com/file/d/1MH3TS5cuXy24nA9EN04qUSxoe_B1_Z_e/view?usp=drive_link">Backlog Jira</a>
+    <a
+      href="https://drive.google.com/file/d/1MH3TS5cuXy24nA9EN04qUSxoe_B1_Z_e/view?usp=drive_link"
+      >Backlog Jira</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://drive.google.com/drive/u/1/folders/1LQ0y_KFISJ82jDiSqOqyXtLVkm-Yw4I9"
+      >Bug Tracker</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://drive.google.com/drive/u/1/folders/1LQ0y_KFISJ82jDiSqOqyXtLVkm-Yw4I9"
+      >ScreenTest Testes Selenium</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://drive.google.com/drive/u/1/folders/1LQ0y_KFISJ82jDiSqOqyXtLVkm-Yw4I9"
+      >CI/CD</a
+    >
   </li>
 </ul>
+
 
 <p align="center">
   <img
