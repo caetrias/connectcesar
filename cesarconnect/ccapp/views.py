@@ -122,14 +122,31 @@ def acessarperfil(request):
     if 'pessoa_id' in request.session:
         pessoa_id = request.session['pessoa_id']
         pessoa = Pessoa.objects.get(id_usuario=pessoa_id)
-        nome_usuario = pessoa.nome
         context = {
-            'nome_usuario': nome_usuario
+            'nome': pessoa.nome,
+            'periodo': pessoa.periodo,
+            'descricao': pessoa.descricao,
+            'mbti': pessoa.mbti,
+            'curso': pessoa.curso,
+            'foto': pessoa.foto,
+            'idade': pessoa.idade
         }
         return render(request, 'acessarperfil.html', context)
 
 def editar_perfil(request):
-    return render(request, 'editar_perfil.html')
+    if request.method == 'GET':
+        return render(request, 'editar_perfil.html')
+    else:
+        user = Pessoa.objects.get(id_usuario=request.session['pessoa_id'])
+        user.nome = request.POST['nome']
+        user.idade = request.POST['idade']
+        user.mbti = request.POST['mbti']
+        user.periodo = request.POST['periodo']
+        user.curso = request.POST['curso']
+        user.foto = request.FILES.get('foto')
+        user.descricao = request.POST['descricao']
+        user.save()
+        return render(request, 'acessarperfil.html')
 
 def emailinvalido(request):
     return render(request, 'emailinvalido.html')

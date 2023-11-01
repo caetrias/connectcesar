@@ -35,6 +35,8 @@
           cursor: pointer;
         "
       >
+      <form method="post" action="{% url 'editar_perfil' %}">
+        {% csrf_token %}
         <label for="input-foto" class="circle-content">
           <span
             class="plus-sign"
@@ -50,6 +52,7 @@
           <!-- Input escondido para seleção de imagem -->
           <input
             type="file"
+            name="foto"
             id="input-foto"
             accept="image/*"
             style="display: none"
@@ -64,6 +67,7 @@
         >
         <input
           type="text"
+          name="descricao"
           class="form-control custom-input"
           style="
             margin-left: 20px;
@@ -86,6 +90,7 @@
         >
         <input
           type="text"
+          name="nome"
           class="form-control custom-input"
           id="nome_usuario"
         />
@@ -98,6 +103,7 @@
         >
         <input
           type="text"
+          name="idade"
           class="form-control custom-input"
           id="idade_usuario"
         />
@@ -108,7 +114,7 @@
         <label for="formGroupExampleInput" class="form-label custom-label"
           >PERIODO</label
         >
-        <select id="periodo_usuario" class="form-select custom-input">
+        <select id="periodo_usuario" name="periodo" class="form-select custom-input">
           <option selected></option>
           <option>1º</option>
           <option>2º</option>
@@ -128,6 +134,7 @@
         >
         <input
           type="text"
+          name="curso"
           class="form-control custom-input"
           id="curso_usuario"
         />
@@ -140,6 +147,7 @@
         >
         <input
           type="text"
+          name="mbti"
           class="form-control custom-input"
           id="mbti_usuario"
         />
@@ -147,9 +155,8 @@
       <br />
 
       <!-- Botão de confirmação -->
-      <a href="/tela_inicial/">
         <button
-          type="button"
+          type="submit"
           class="btn btn-dark"
           id="botao_confirmar"
           style="
@@ -161,7 +168,7 @@
         >
           Confirmar
         </button>
-      </a>
+      </form>
     </div>
   </div>
 </div>
