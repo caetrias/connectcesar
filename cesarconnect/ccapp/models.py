@@ -6,6 +6,7 @@ class Grupo(models.Model):
     nome_grupo = models.CharField(max_length=255)
     descricao_grupo = models.TextField()
     periodo = models.CharField(max_length=255)
+    foto_grupo = models.ImageField(upload_to='imagens/', null=True, blank=True)
     criado_em = models.DateTimeField(auto_now_add=True)
     atualizado_em = models.DateTimeField(auto_now=True)
 
