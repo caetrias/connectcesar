@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Pessoa, Grupo
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseForbidden
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth import login as login_django
 from django.contrib.auth.decorators import login_required
@@ -146,7 +146,7 @@ def editar_perfil(request):
         user.foto = request.FILES.get('foto')
         user.descricao = request.POST['descricao']
         user.save()
-        return render(request, 'acessarperfil.html')
+        return render(request, 'tela_inicial.html')
 
 def emailinvalido(request):
     return render(request, 'emailinvalido.html')
@@ -194,3 +194,33 @@ def acesso_grupo(request, id_field):
         'criador' : criador_grupo
     }
     return render(request, 'acesso_pesquisa.html', context)
+
+def editar_grupo(request, grupo_id):
+    if 'pessoa_id' in request.session:
+        pessoa_id = request.session['pessoa_id']
+        grupo_id = int(grupo_id)
+
+        try:
+            pessoa = Pessoa.objects.get(id_usuario=pessoa_id)
+
+            if pessoa.grupo_criado and pessoa.grupo_criado.id_grupo == grupo_id:
+                grupo = Grupo.objects.get(id_grupo=grupo_id)
+
+                if request.method == 'POST':
+                    grupo.nome_grupo = request.POST.get('nome_grupo')
+                    grupo.descricao_grupo = request.POST.get('descricao_grupo')
+                    grupo.periodo_grupo = request.POST.get('periodo_grupo')
+                    grupo.foto_grupo = request.FILES.get('foto_grupo')
+                    grupo.save()
+                    return redirect('meugrupo')
+                
+                context = {'grupo': grupo}
+                return render(request, 'editar_grupo.html', context)
+            
+            else:
+                return HttpResponseForbidden("Você não tem permissão para editar este grupo.")
+        except (Pessoa.DoesNotExist, Grupo.DoesNotExist):
+            return render(request, 'grupo_inexistente.html')
+        
+    else:
+        return redirect('login')
