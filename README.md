@@ -190,6 +190,15 @@
    <li><a href="https://drive.google.com/file/d/1ITPU6Z6pM1-UmH_O-HkLNS4g8C6t3Pq4/view?usp=drive_link">ScreenCast Site</a></li>
 </ul>
 
+<p>Entrega 4</p>
+<ul>
+  <li>
+    <a
+      href="https://docs.google.com/document/d/1HMgFS6grvc7ghHJqa_3I_6-wmORn5KY4ejPAV3zUSWQ/edit"
+      >Programação em Par</a
+    >
+  </li>
+</ul>
 
 <p align="center">
   <img
