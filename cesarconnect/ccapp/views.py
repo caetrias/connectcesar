@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Pessoa, Grupo
 from django.http import HttpResponse, HttpResponseForbidden
 from django.contrib.auth import authenticate, logout
@@ -224,3 +224,24 @@ def editar_grupo(request, grupo_id):
         
     else:
         return redirect('login')
+    
+
+def adicionar_a_equipe(request, id_usuario):
+    if 'pessoa_id' in request.session:
+        criador_id = request.session['pessoa_id']
+        criador = Pessoa.objects.get(id_usuario=criador_id)
+
+        if criador.grupo_criado:
+            grupo_id = criador.grupo_criado.id_grupo
+
+            grupo = get_object_or_404(Grupo, id_grupo=grupo_id)
+            usuario_adicionado = get_object_or_404(Pessoa, id_usuario=id_usuario)
+
+            usuario_adicionado.grupo_criado = grupo
+            usuario_adicionado.save()
+
+            return redirect('meugrupo')
+        
+
+    return HttpResponseForbidden("Erro ao adicionar a equipe")
+    
