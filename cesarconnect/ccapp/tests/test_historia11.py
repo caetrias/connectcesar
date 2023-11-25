@@ -27,7 +27,7 @@ class Historia11(LiveServerTestCase):
         default_page(driver)
         login()
 
-        #pesquisa o grupo
+        #pesquisar por grupo
         buscar_perfil = driver.find_element(By.ID, 'busca')
         buscar_perfil.send_keys("ola")
         time.sleep(1)

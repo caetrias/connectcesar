@@ -28,9 +28,9 @@ class Historia13(LiveServerTestCase):
         default_page(driver)
         login()
 
-        #pesquisa usuario
+        #pesquisa por usuario
         buscar_perfil = driver.find_element(By.ID, 'busca')
-        buscar_perfil.send_keys("edu")
+        buscar_perfil.send_keys("bruno")
         time.sleep(1)
         pesquisar_grupo = driver.find_element(By.ID, 'pesquisa')
         pesquisar_grupo.click()

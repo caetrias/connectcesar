@@ -28,11 +28,12 @@ class Historia12(LiveServerTestCase):
 
         #pesquisa o grupo
         buscar_perfil = driver.find_element(By.ID, 'busca')
-        buscar_perfil.send_keys("ola")
+        buscar_perfil.send_keys("grupo87")
         time.sleep(1)
         pesquisar_grupo = driver.find_element(By.ID, 'pesquisa')
         pesquisar_grupo.click()
         time.sleep(1)
+
         #acessa o grupo  
         pesquisar_grupo = driver.find_element(By.ID, 'grupo_encontrado')
         pesquisar_grupo.click()
