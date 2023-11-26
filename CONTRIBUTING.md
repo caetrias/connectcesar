@@ -2,7 +2,41 @@
 
 Se você está aqui, muito obrigado por demonstrar interesse em contribuir com o site do Connect CESAR! Para ajudar da melhor maneira possível, leia esse breve guia informando tudo que você deve saber sobre como enviar sua contribuição para a nossa equipe
 
-## 1. Instruções
+## 1. Testando a aplicação
+
+Para testar o nosso site rodando localmente, siga esses passos:
+
+1. **Clone**
+   - Faça um clone do nosso repositório na sua máquina utilizando o seguinte comando:
+
+    ```bash
+    git clone https://github.com/caetrias/connectcesar.git
+    ```
+
+2. **Ambiente Virtual**
+   - Instale um ambiente virtual usando o seguinte comando
+
+   ```bash
+   python -m venv venv
+   ```
+
+   - Após criar o ambiente virtual, inicie-o com o seguinte comando
+
+      ```bash
+      ./venv/scripts/activate
+      ```
+
+
+3. **Rodar o Programa**
+
+   - Por fim, utilize esse comando para rodar o site localmente
+
+      ```bash
+      python manage.py runserver
+      ```
+
+
+## 2. Instruções
 
 0. **Reporte uma Issue**
     - Se não deseja resolver uma issue encontrada, você pode simplesmente reportá-la na nossa página de [issues](https://github.com/caetrias/connectcesar/issues). Tente fornecer informações detalhadas sobre o problema encontrado, se possível com prints. Pode ser tanto um bug, que prejudica o uso do sistema, quanto uma issue, algo que pode ser melhorado, que a equipe tentará prontamente resolver. 
@@ -36,7 +70,7 @@ Se você está aqui, muito obrigado por demonstrar interesse em contribuir com o
 7. **Envie um Pull Request:**
    - Abra um pull request acessando essa [página](https://github.com/caetrias/connectcesar/pulls) explicando as mudanças que você realizou, bem como o problema que essas mudanças soluciona. Coloque um título sucinto e objetivo e forneça mais detalhes nos comentário do pull request. Se a equipe aceitar as mudanças, o seu pull request será aprovada, permitindo as suas alterações entrarem no repositório principal. Se não, negaremos  pull request, enviando uma mensagem de feedback do motivo de recusarmos. Sinta-se livre para enviar quantos pull requests desejar, bem como conversar com qualquer um dos membros sobre mais informações do projeto. 
 
-## 2. Diretrizes de Código 
+## 3. Diretrizes de Código 
 
 - Siga as boas práticas de codificação em Python, HTML e CSS.
   - Formatação correta do código.
