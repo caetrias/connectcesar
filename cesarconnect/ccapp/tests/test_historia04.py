@@ -31,17 +31,17 @@ class Historia04(LiveServerTestCase):
 
         buscar_nome = driver.find_element(By.NAME, 'username')
         buscar_nome.click()
-        buscar_nome.send_keys("clara maria")
+        buscar_nome.send_keys("clara mariaa")
         time.sleep(1)
 
         buscar_email = driver.find_element(By.NAME, 'email')
         buscar_email.click()
-        buscar_email.send_keys("clarinham@cesar.com")
+        buscar_email.send_keys("clarinhaam@cesar.com")
         time.sleep(1)
 
         buscar_senha = driver.find_element(By.NAME, 'senha')
         buscar_senha.click()
-        buscar_senha.send_keys("mariac123" + Keys.RETURN)
+        buscar_senha.send_keys("mariaca123" + Keys.RETURN)
         time.sleep(1)
 
         #acessa seu perfil
@@ -65,17 +65,17 @@ class Historia04(LiveServerTestCase):
 
         buscar_nome = driver.find_element(By.NAME, 'username')
         buscar_nome.click()
-        buscar_nome.send_keys("luisa guedes")
+        buscar_nome.send_keys("luisa guedees")
         time.sleep(1)
 
         buscar_email = driver.find_element(By.NAME, 'email')
         buscar_email.click()
-        buscar_email.send_keys("luisaguedes@cesar.com")
+        buscar_email.send_keys("luisaguedees@cesar.com")
         time.sleep(1)
 
         buscar_senha = driver.find_element(By.NAME, 'senha')
         buscar_senha.click()
-        buscar_senha.send_keys("lug23" + Keys.RETURN)
+        buscar_senha.send_keys("lug233" + Keys.RETURN)
         time.sleep(1)
 
         #acessa seu perfil

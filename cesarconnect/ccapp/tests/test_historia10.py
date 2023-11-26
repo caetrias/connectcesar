@@ -31,18 +31,18 @@ class Historia10(LiveServerTestCase):
         time.sleep(1)  # You can add a wait to allow the page to load, but it's better to use explicit waits
 
         # Find the "qualidades_usuario" element and send keys
-        qualidades_usuario = driver.find_element(By.ID, 'formGroupExampleInput')
+        qualidades_usuario = driver.find_element(By.ID, 'nome_do_grupo')
         qualidades_usuario.send_keys('Campo Minado')
         time.sleep(1)
 
         # Find and clear the "nome_usuario" element, then send new keys
-        editar_perfil = driver.find_element(By.ID, 'formGroupExampleInput2')
+        editar_perfil = driver.find_element(By.ID, 'descricao_grupo')
         editar_perfil.clear()  # Clear the existing text, if any.
         editar_perfil.send_keys('Projeto de Campo Minado programado em C!')
         time.sleep(1)
 
         # Find the select element
-        periodo_select = driver.find_element(By.ID, 'inputState')
+        periodo_select = driver.find_element(By.ID, 'periodo_grupo')
         # Create a Select object
         select = Select(periodo_select)
         # Select an option by its visible text
@@ -50,6 +50,41 @@ class Historia10(LiveServerTestCase):
         time.sleep(1)
 
         # Click the confirmation button
-        confirmacao = driver.find_element(By.ID, 'confirmacriargrupo')
+        confirmacao = driver.find_element(By.ID, 'confirma_grupo')
         confirmacao.click()
         time.sleep(1)
+
+    def test_005_scenario02(self):
+            
+            driver = setup_selenium()
+
+            default_page(driver)
+            login()
+            
+            editar_perfil = driver.find_element(By.ID, 'criar_grupo')
+            editar_perfil.click()
+            time.sleep(1)  # You can add a wait to allow the page to load, but it's better to use explicit waits
+
+            # Find the "qualidades_usuario" element and send keys
+            qualidades_usuario = driver.find_element(By.ID, 'nome_do_grupo')
+            qualidades_usuario.send_keys('Monitor Inteligente')
+            time.sleep(1)
+
+            # Find and clear the "nome_usuario" element, then send new keys
+            editar_perfil = driver.find_element(By.ID, 'descricao_grupo')
+            editar_perfil.clear()  # Clear the existing text, if any.
+            editar_perfil.send_keys('Monitor de PC rodado a energia eolica')
+            time.sleep(1)
+
+            # Find the select element
+            periodo_select = driver.find_element(By.ID, 'periodo_grupo')
+            # Create a Select object
+            select = Select(periodo_select)
+            # Select an option by its visible text
+            select.select_by_visible_text("4º")  # Replace "3º" with the option you want to select
+            time.sleep(1)
+
+            # Click the confirmation button
+            confirmacao = driver.find_element(By.ID, 'confirma_grupo')
+            confirmacao.click()
+            time.sleep(1)
