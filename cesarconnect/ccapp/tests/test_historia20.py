@@ -9,8 +9,9 @@ from selenium.webdriver.support.ui import Select
 from selenium_setup import *
 
 import time
-'''
-class Historia20(LiveServerTestCase):  
+
+
+class Historia20(LiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         setup_selenium()
@@ -18,13 +19,13 @@ class Historia20(LiveServerTestCase):
     @classmethod
     def tearDownClass(cls):
         finalizar_selenium()
-    
-    def test_003_cenario2(self):
-    
-        driver = setup_selenium()
 
+    def test_010_scenario01(self):
+        
+        driver = setup_selenium()
+        
         default_page(driver)
         login()
-'''
 
+#ADICIONAR PARTICIPANTES A MINHA EQUIPE
 #FALTA ADICIONAR ESSE TESTE!!!!!!

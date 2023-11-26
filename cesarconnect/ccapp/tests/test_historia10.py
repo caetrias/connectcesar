@@ -10,8 +10,7 @@ from selenium_setup import *
 
 import time
 
-
-class Historia14(LiveServerTestCase):  
+class Historia10(LiveServerTestCase):  
     @classmethod
     def setUpClass(cls):
         setup_selenium()
@@ -20,14 +19,14 @@ class Historia14(LiveServerTestCase):
     def tearDownClass(cls):
         finalizar_selenium()   
 
-    def test_003_cenario2(self):
+    def test_005_scenario01(self):
         
         driver = setup_selenium()
 
         default_page(driver)
         login()
         
-        editar_perfil = driver.find_element(By.ID, 'criargrupo1')
+        editar_perfil = driver.find_element(By.ID, 'criar_grupo')
         editar_perfil.click()
         time.sleep(1)  # You can add a wait to allow the page to load, but it's better to use explicit waits
 
