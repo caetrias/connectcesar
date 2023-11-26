@@ -10,32 +10,22 @@ from selenium_setup import *
 
 import time
 
-
-class Historia14(LiveServerTestCase):  
+class Historia04(LiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         setup_selenium()
 
     @classmethod
     def tearDownClass(cls):
-        finalizar_selenium()   
+        finalizar_selenium()
 
-    def test_003_cenario2(self):
-        
+    def test_008_scenario01(self):
         driver = setup_selenium()
 
         default_page(driver)
-        login()
-        
-        #pesquisa usuario
-        buscar_perfil = driver.find_element(By.ID, 'busca')
-        buscar_perfil.send_keys("bruno")
-        time.sleep(1)
-        pesquisar_grupo = driver.find_element(By.ID, 'pesquisa')
-        pesquisar_grupo.click()
-        time.sleep(1) 
 
-        #acessa o usuario
-        pesquisar_grupo = driver.find_element(By.ID, 'usuario_encontrado')
-        pesquisar_grupo.click()
-        time.sleep(1)
+        login()
+
+
+
+        

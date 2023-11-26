@@ -10,8 +10,7 @@ from selenium_setup import *
 
 import time
 
-
-class Historia5(LiveServerTestCase):
+class Historia05(LiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         setup_selenium()
@@ -19,15 +18,15 @@ class Historia5(LiveServerTestCase):
     @classmethod
     def tearDownClass(cls):
         finalizar_selenium()
-        
-    def teste000(self):
+
+    def test_002_scenario01(self):
+                
         driver = setup_selenium()
 
         default_page(driver)
         login()
 
         #editar perfil
-
         editar_perfil = driver.find_element(By.ID, 'botao_perfil')
         editar_perfil.click()
         time.sleep(1)
@@ -66,3 +65,5 @@ class Historia5(LiveServerTestCase):
         time.sleep(1)
 
         #FALTA AJEITAR AQUI PARA A VISUALIZAÇAÒ DA MUDANCA DO NO PERFIL
+
+#INCOMPLETAAAAA
