@@ -194,10 +194,53 @@
 <ul>
   <li>
     <a
+      href=""
+      >Screen Cast Lo-Fi</a
+    >
+  </li>
+  <li>
+    <a
       href="https://docs.google.com/document/d/1HMgFS6grvc7ghHJqa_3I_6-wmORn5KY4ejPAV3zUSWQ/edit"
       >Programação em Par</a
     >
   </li>
+  <li>
+    <a
+      href=""
+      >Diagrama de Atividades</a
+    >
+  </li>
+  <li>
+    <a
+      href=""
+      >Quadro Jira</a
+    >
+  </li>
+  <li>
+    <a
+      href=""
+      >Backlog Jira</a
+    >
+  </li>
+  <li>
+    <a
+      href=""
+      >Bug Tracker</a
+    >
+  </li>
+  <li>
+    <a
+      href=""
+      >ScreenTest Testes Selenium</a
+    >
+  </li>
+  <li>
+    <a
+      href=""
+      >CI/CD</a
+    >
+  </li>
+   <li><a href="">ScreenCast Site</a></li>
   <li>
     <a
       href="https://github.com/caetrias/connectcesar/blob/main/CONTRIBUTING.md"
