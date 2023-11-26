@@ -74,14 +74,44 @@
 
     <!-- botões-->
     <div style="margin-top: 20px; text-align: center">
-      <button type="button" class="btn btn-secondary" style="color: black">
+      {% comment %} <button type="button" class="btn btn-secondary" style="color: black">
         Convidar Participantes
-      </button>
+      </button> {% endcomment %}
       <a href="{% url 'editar_grupo' grupo_id=grupo.id_grupo %}">
-      <button type="button" class="btn btn-secondary" style="color: black" id="editargrupo">
+      <button type="button" class="btn btn-primary" style="color: black" id="editargrupo">
         Editar Grupo
       </button>
     </a>
+    <br> <br> 
+
+      <button type="button" class="btn btn-danger" style="color: black" data-toggle="modal" data-target="#modal_deletar_grupo">
+        Deletar Grupo
+      </button>
+   
+
+    </div>
+  </div>
+</div>
+
+<!-- modal de deletar grupo -->
+<div class="modal fade" id="modal_deletar_grupo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">CONFIRMAR DELEÇÃO DO GRUPO</h5>
+      </div>
+      <div class="modal-body d-flex justify-content-center align-items-center">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+      </div>
+
+          
+      <div class="modal-footer d-flex justify-content-center align-items-center">
+        <form action="{% url 'deletar_grupo' grupo.id_grupo%}" method="POST">
+          {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Confirmar</button>
+      </form>
+
+      </div>
     </div>
   </div>
 </div>

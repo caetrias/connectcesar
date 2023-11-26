@@ -77,7 +77,7 @@ def criargrupo(request):
         novo_grupo = Grupo()
         novo_grupo.nome_grupo = nome_grupo
         novo_grupo.descricao_grupo = descricao_grupo
-        novo_grupo.periodo = periodo
+        novo_grupo.periodo_grupo = periodo
         novo_grupo.save()
 
         pessoa = Pessoa.objects.get(id_usuario=request.session['pessoa_id'])
@@ -146,7 +146,21 @@ def editar_perfil(request):
         user.foto = request.FILES.get('foto')
         user.descricao = request.POST['descricao']
         user.save()
-        return render(request, 'tela_inicial.html')
+        
+        if 'pessoa_id' in request.session:
+            pessoa_id = request.session['pessoa_id']
+            grupos = Grupo.objects.all()
+            pessoa = Pessoa.objects.get(id_usuario=pessoa_id)
+            nome_usuario = pessoa.nome
+        
+            context = {
+                'grupos' : grupos,
+                'nome_usuario' : nome_usuario,
+            }
+            return render(request, 'tela_inicial.html', context)
+        
+        else:
+            return HttpResponse("erro")
 
 def emailinvalido(request):
     return render(request, 'emailinvalido.html')
@@ -226,22 +240,30 @@ def editar_grupo(request, grupo_id):
         return redirect('login')
     
 
-def adicionar_a_equipe(request, id_usuario):
-    if 'pessoa_id' in request.session:
-        criador_id = request.session['pessoa_id']
-        criador = Pessoa.objects.get(id_usuario=criador_id)
+# def adicionar_a_equipe(request, id_usuario):
+#     if 'pessoa_id' in request.session:
+#         criador_id = request.session['pessoa_id']
+#         criador = Pessoa.objects.get(id_usuario=criador_id)
 
-        if criador.grupo_criado:
-            grupo_id = criador.grupo_criado.id_grupo
+#         if criador.grupo_criado:
+#             grupo_id = criador.grupo_criado.id_grupo
 
-            grupo = get_object_or_404(Grupo, id_grupo=grupo_id)
-            usuario_adicionado = get_object_or_404(Pessoa, id_usuario=id_usuario)
+#             grupo = get_object_or_404(Grupo, id_grupo=grupo_id)
+#             usuario_adicionado = get_object_or_404(Pessoa, id_usuario=id_usuario)
 
-            usuario_adicionado.grupo_criado = grupo
-            usuario_adicionado.save()
+#             usuario_adicionado.grupo_criado = grupo
+#             usuario_adicionado.save()
 
-            return redirect('meugrupo')
+#             return redirect('meugrupo')
         
 
-    return HttpResponseForbidden("Erro ao adicionar a equipe")
+#     return HttpResponseForbidden("Erro ao adicionar a equipe")
+    
+def deletar_grupo(request, pk):
+    print(pk)
+    if request.method == "POST":
+        grupo = get_object_or_404(Grupo, id_grupo=pk)
+        grupo.delete()
+    return render(request, "criargrupo.html")
+    
     
