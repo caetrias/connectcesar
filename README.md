@@ -198,6 +198,12 @@
       >Programação em Par</a
     >
   </li>
+  <li>
+    <a
+      href="https://github.com/caetrias/connectcesar/blob/main/CONTRIBUTING.md"
+      >Contributing.md</a
+    >
+  </li>
 </ul>
 
 <p align="center">
