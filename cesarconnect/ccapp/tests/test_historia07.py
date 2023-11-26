@@ -52,3 +52,20 @@ class Historia07(LiveServerTestCase):
         pesquisar_usuario = driver.find_element(By.ID, 'pesquisa')
         pesquisar_usuario.click()
         time.sleep(1)
+    
+    def test_003_cenario03(self):
+        
+        driver = setup_selenium()
+
+        default_page(driver)
+        login()
+
+        #pesquisa por usuário
+            #mais de um usuário encontrado
+        buscar_usuario = driver.find_element(By.ID, 'busca')
+        buscar_usuario.send_keys("bruno")
+        time.sleep(1)
+        
+        pesquisar_usuario = driver.find_element(By.ID, 'pesquisa')
+        pesquisar_usuario.click()
+        time.sleep(1)

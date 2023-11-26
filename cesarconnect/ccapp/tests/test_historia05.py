@@ -32,12 +32,12 @@ class Historia05(LiveServerTestCase):
         time.sleep(1)
 
         qualidades_usuario = driver.find_element(By.ID, 'qualidades_usuario')
-        qualidades_usuario.send_keys('Prestativo, Presente e Gente Boa')
+        qualidades_usuario.send_keys('Prestativo, presente e gente boa')
         time.sleep(1)
 
         editar_perfil = driver.find_element(By.ID, 'nome_usuario')
         editar_perfil.clear()
-        editar_perfil.send_keys('Pedro Ivo')
+        editar_perfil.send_keys('Carlos Marinho')
         time.sleep(1)
 
         idade_usuario = driver.find_element(By.ID, 'idade_usuario')
@@ -60,10 +60,75 @@ class Historia05(LiveServerTestCase):
         mbti_usuario.send_keys('ISTJ')
         time.sleep(1)
 
+        '''
         confirmacao = driver.find_element(By.ID, 'botao_confrimar')
         confirmacao.click()
         time.sleep(1)
 
-        #FALTA AJEITAR AQUI PARA A VISUALIZAÇAÒ DA MUDANCA DO NO PERFIL
+        default_page(driver)
 
-#INCOMPLETAAAAA
+        perfil = driver.find_element(By.ID, 'perfil')
+        perfil.click()
+        time.sleep(1)
+
+        visualizar_perfil = driver.find_element(By.ID, 'visualizar_perfil')
+        visualizar_perfil.click()
+        time.sleep(1)
+        '''
+    
+    def test_002_scenario02(self):
+                
+        driver = setup_selenium()
+
+        default_page(driver)
+        login()
+
+        #editar perfil
+        editar_perfil = driver.find_element(By.ID, 'botao_perfil')
+        editar_perfil.click()
+        time.sleep(1)
+
+        qualidades_usuario = driver.find_element(By.ID, 'qualidades_usuario')
+        qualidades_usuario.send_keys('Bom comunicador e bom solucionador de problemas')
+        time.sleep(1)
+
+        editar_perfil = driver.find_element(By.ID, 'nome_usuario')
+        editar_perfil.clear()
+        editar_perfil.send_keys('Silvio Augusto')
+        time.sleep(1)
+
+        idade_usuario = driver.find_element(By.ID, 'idade_usuario')
+        idade_usuario.clear()
+        idade_usuario.send_keys('16')
+        time.sleep(1)
+
+        periodo_select = driver.find_element(By.ID, 'periodo_usuario')
+        select = Select(periodo_select)
+        select.select_by_visible_text("1º")
+        time.sleep(1)
+
+        curso_usuario = driver.find_element(By.ID, 'curso_usuario')
+        curso_usuario.clear()
+        curso_usuario.send_keys('Design')
+        time.sleep(1)
+
+        mbti_usuario = driver.find_element(By.ID, 'mbti_usuario')
+        mbti_usuario.clear()
+        mbti_usuario.send_keys('ISTP')
+        time.sleep(1)
+
+        '''
+        confirmacao = driver.find_element(By.ID, 'botao_confrimar')
+        confirmacao.click()
+        time.sleep(1)
+
+        default_page(driver)
+
+        perfil = driver.find_element(By.ID, 'perfil')
+        perfil.click()
+        time.sleep(1)
+
+        visualizar_perfil = driver.find_element(By.ID, 'visualizar_perfil')
+        visualizar_perfil.click()
+        time.sleep(1)
+        '''

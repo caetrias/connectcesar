@@ -10,7 +10,7 @@ from selenium_setup import *
 
 import time
 
-class Historia22(LiveServerTestCase):  
+class Historia11(LiveServerTestCase):  
     @classmethod
     def setUpClass(cls):
         setup_selenium()  
@@ -19,7 +19,7 @@ class Historia22(LiveServerTestCase):
     def tearDownClass(cls):
         finalizar_selenium()   
 
-    def test_005_scenario01(self):
+    def test_006_scenario01(self):
         
         driver = setup_selenium()
 
