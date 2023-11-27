@@ -31,17 +31,17 @@ class Historia04(LiveServerTestCase):
 
         buscar_nome = driver.find_element(By.NAME, 'username')
         buscar_nome.click()
-        buscar_nome.send_keys("clara mariaa")
+        buscar_nome.send_keys("clara mariaaa")
         time.sleep(1)
 
         buscar_email = driver.find_element(By.NAME, 'email')
         buscar_email.click()
-        buscar_email.send_keys("clarinhaam@cesar.com")
+        buscar_email.send_keys("clarinhaam@cesaar.com")
         time.sleep(1)
 
         buscar_senha = driver.find_element(By.NAME, 'senha')
         buscar_senha.click()
-        buscar_senha.send_keys("mariaca123" + Keys.RETURN)
+        buscar_senha.send_keys("mariaca1234" + Keys.RETURN)
         time.sleep(1)
 
         #acessa seu perfil
