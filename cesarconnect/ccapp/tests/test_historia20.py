@@ -20,12 +20,19 @@ class Historia20(LiveServerTestCase):
     def tearDownClass(cls):
         finalizar_selenium()
 
-    def test_010_scenario01(self):
+    def test_020_scenario01(self):
         
         driver = setup_selenium()
-        
+
         default_page(driver)
         login()
+        #seleciona meu grupo no nav bar
+        editar_perfil = driver.find_element(By.ID, 'botao_meugrupo')
+        editar_perfil.click()
+        time.sleep(1)  
 
-#ADICIONAR PARTICIPANTES A MINHA EQUIPE
-#FALTA ADICIONAR ESSE TESTE!!!!!!
+        # selecion a opção deletar meu grupo
+        deletar_grupo = driver.find_element(By.ID, 'deletargrupo')
+        deletar_grupo_grupo.click()
+        time.sleep(1)
+        

@@ -60,12 +60,10 @@ class Historia05(LiveServerTestCase):
         mbti_usuario.send_keys('ISTJ')
         time.sleep(1)
 
-        '''
-        confirmacao = driver.find_element(By.ID, 'botao_confrimar')
+        
+        confirmacao = driver.find_element(By.ID, 'botao_confirmar')
         confirmacao.click()
         time.sleep(1)
-
-        default_page(driver)
 
         perfil = driver.find_element(By.ID, 'perfil')
         perfil.click()
@@ -74,7 +72,7 @@ class Historia05(LiveServerTestCase):
         visualizar_perfil = driver.find_element(By.ID, 'visualizar_perfil')
         visualizar_perfil.click()
         time.sleep(1)
-        '''
+        
     
     def test_002_scenario02(self):
                 
@@ -117,12 +115,9 @@ class Historia05(LiveServerTestCase):
         mbti_usuario.send_keys('ISTP')
         time.sleep(1)
 
-        '''
-        confirmacao = driver.find_element(By.ID, 'botao_confrimar')
+        confirmacao = driver.find_element(By.ID, 'botao_confirmar')
         confirmacao.click()
         time.sleep(1)
-
-        default_page(driver)
 
         perfil = driver.find_element(By.ID, 'perfil')
         perfil.click()
@@ -131,4 +126,3 @@ class Historia05(LiveServerTestCase):
         visualizar_perfil = driver.find_element(By.ID, 'visualizar_perfil')
         visualizar_perfil.click()
         time.sleep(1)
-        '''
