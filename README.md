@@ -224,7 +224,7 @@
   </li>
   <li>
     <a
-      href=""
+      href="https://drive.google.com/file/d/1Rt4iiXErJo8ma6-WrwmjUGGgFegYygR4/view?usp=drive_link"
       >Bug Tracker</a
     >
   </li>
