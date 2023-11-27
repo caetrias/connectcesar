@@ -67,7 +67,7 @@ class Historia10(LiveServerTestCase):
 
             # Find the "qualidades_usuario" element and send keys
             qualidades_usuario = driver.find_element(By.ID, 'nome_do_grupo')
-            qualidades_usuario.send_keys('Monitor Inteligente')
+            qualidades_usuario.send_keys('Monitor Inteligenteee')
             time.sleep(1)
 
             # Find and clear the "nome_usuario" element, then send new keys

@@ -33,6 +33,6 @@ class Historia20(LiveServerTestCase):
 
         # selecion a opção deletar meu grupo
         deletar_grupo = driver.find_element(By.ID, 'deletargrupo')
-        deletar_grupo_grupo.click()
+        deletar_grupo.click()
         time.sleep(1)
         
