@@ -57,13 +57,11 @@ class Historia17(LiveServerTestCase):
         pesquisar_usuario.click()
         time.sleep(1) 
 
-        '''
         #acessa o usuario
             #mais de um usuário encontrado
         acesar_usuario = driver.find_element(By.ID, 'usuario_encontrado')
         acesar_usuario.click()
         time.sleep(1)
-        '''
 
     def test_007_cenario03(self):
         

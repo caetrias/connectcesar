@@ -32,7 +32,7 @@ class Historia11(LiveServerTestCase):
 
         # Find the "qualidades_usuario" element and send keys
         qualidades_usuario = driver.find_element(By.ID, 'nome_do_grupo')
-        qualidades_usuario.send_keys('Apple Watchhh')
+        qualidades_usuario.send_keys('Energia Monk')
         time.sleep(1)
 
         # Find and clear the "nome_usuario" element, then send new keys
@@ -63,7 +63,7 @@ class Historia11(LiveServerTestCase):
         time.sleep(1)
         #seleciona a opçao nome do grupo e altera
         editar_grupo = driver.find_element(By.ID, 'input_nome_grupo')
-        editar_grupo.send_keys('Campo Minado')
+        editar_grupo.send_keys('RUN Rápida')
         time.sleep(1)
     
         # seleciona e altera o periodo do grupo
@@ -75,7 +75,7 @@ class Historia11(LiveServerTestCase):
        # selecion a opção editar DESCRIÇÃO
         editar_descricao = driver.find_element(By.ID, 'qualidades_grupo')
         editar_descricao.click()
-        editar_descricao.send_keys('Corrida de chiken maluca em C')
+        editar_descricao.send_keys('Corrida de chicken doida em PHP')
         time.sleep(1)
 
         # Click the confirmation button
@@ -100,13 +100,13 @@ class Historia11(LiveServerTestCase):
         time.sleep(1)
          # Find the "qualidades_usuario" element and send keys
         qualidades_usuario = driver.find_element(By.ID, 'nome_do_grupo')
-        qualidades_usuario.send_keys('Apple Watchh')
+        qualidades_usuario.send_keys('SMRT Monitor')
         time.sleep(1)
 
         # Find and clear the "nome_usuario" element, then send new keys
         editar_perfil = driver.find_element(By.ID, 'descricao_grupo')
         editar_perfil.clear()  # Clear the existing text, if any.
-        editar_perfil.send_keys('Monitor de PC rodado a energia eolica')
+        editar_perfil.send_keys('Monitor de PC inteligente')
         time.sleep(1)
 
         # Find the select element
@@ -132,7 +132,7 @@ class Historia11(LiveServerTestCase):
         #seleciona a opçao nome do grupo e altera
 
         editar_grupo = driver.find_element(By.ID, 'input_nome_grupo')
-        editar_grupo.send_keys('chiken run')
+        editar_grupo.send_keys('ChicRUn')
         time.sleep(1)
     
         # seleciona e altera o periodo do grupo
@@ -144,7 +144,7 @@ class Historia11(LiveServerTestCase):
         # selecion a opção editar DESCRIÇÃO
         editar_descricao = driver.find_element(By.ID, 'qualidades_grupo')
         editar_descricao.click()
-        editar_descricao.send_keys('Corrida de chiken maluca em C')
+        editar_descricao.send_keys('Corrida de chicken')
         time.sleep(1)
 
         # Click the confirmation button
