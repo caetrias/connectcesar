@@ -20,4 +20,6 @@ urlpatterns = [
     path('grupo_nao_pertence/', views.grupo_nao_pertence, name='grupo_nao_pertence'),
     path('grupo_sem_acesso/', views.grupo_sem_acesso, name='grupo_sem_acesso'),
     path('grupo_inexistente/', views.grupo_inexistente, name='grupo_inexistente'),
+    path('editar_grupo/<int:grupo_id>', views.editar_grupo, name="editar_grupo"),
+    path('deletar_grupo/<int:pk>/', views.deletar_grupo, name="deletar_grupo"),
 ]

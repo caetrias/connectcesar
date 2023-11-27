@@ -5,15 +5,15 @@
 <div class="container">
     <!-- Container com Informacoes -->
 <div class="profile-links">
-        <img class="card-img-top rounded-circle shadow bg-white" style="width: 150px" src="http://avatars.dicebear.com/api/open-peeps/stefan.svg" alt="...">
+        <img class="card-img-top rounded-circle shadow bg-white" style="width: 150px" src="..." alt="Foto de Perfil">
         <li><a style="font-size: 30px;">{{ pessoa.nome }}</a></li>
-        <li><a>2 periodo</a></li>
+        <li><a>{{ pessoa.periodo }} Período</a></li>
+        <li><a>Idade: {{ pessoa.idade }}</a></li>
+        <li><a>Curso: {{ pessoa.curso }}</a></li>
+        <li><a>MBTI: {{ pessoa.mbti }}</a></li>
         <h3 class="mt-5">Sobre Mim</h3>
         <p class="text-justify">
-          👨‍🎓 Estudante universitário apaixonado por ciência da computação na Cesar School. 📚🎓
-           Explorando o mundo do conhecimento e buscando crescimento pessoal. 
-          💡 Sempre aberto a novas conexões e oportunidades de aprendizado. Vamos conversar! 
-          👋😊 #Aprendizado #Universidade #CrescimentoPessoal 🌟
+          {{ pessoa.descricao }}
     </p>
     </div>
     </div>
@@ -37,7 +37,21 @@
 
 <!-- retângulo que contém as informações da página-->
 <div style="background-color: #b8b7b7; padding: 20px; border-radius: 10px; max-width: 1300px; margin: 0 auto; display: flex; flex-direction: row; justify-content: space-between; height: 550px;">
-  <div style="display: flex; flex-direction:column; align-items: flex-start;">
+  <div style="display: flex; flex-direction: column; align-items: flex-start">
+    <h3 style="margin-left: 20px">INFORMAÇÕES DO GRUPO</h3>
+    <!-- área onde ficará as informações do grupo-->
+    <div
+      style="
+        background-color: white;
+        width: 750px;
+        height: 100px;
+        border-radius: 10px;
+        margin-left: 20px;
+      "
+    >
+      {{grupo.periodo_grupo}} PERIODO
+    </div>
+  <br />
   <h3 style="margin-left: 20px;">DESCRIÇÃO</h3> <!-- área onde ficará a descrição do grupo-->
   <div style="background-color: white; width: 750px; height: 100px; border-radius: 10px; margin-left: 20px;">
   {{grupo.descricao_grupo}}
@@ -63,11 +77,6 @@
       <p>Max</p>
   </div>
 
-<!-- botões-->
-<div style="margin-top: 20px; text-align: center;">
-  <button type="button" class="btn btn-secondary" style="color: black;">Convidar Participantes</button>
-  <button type="button" class="btn btn-secondary" style="color: black;">Editar Grupo</button>
-</div>
 {% else %}
     <p> INFORMAÇÃO NÃO DISPONÍVEL </p>
 {% endif %}

@@ -29,45 +29,24 @@
   </div>
 
   <div class="right-section">
-    <!-- resto das informações da página-->
 
     <div class="container">
       <form method="post" action="{% url 'criargrupo' %}">
         {% csrf_token %}
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label"
-            >Nome do Grupo</label
-          >
-          <input
-            type="text"
-            class="form-control customize-input"
-            id="formGroupExampleInput"
-            name="nome_grupo"
-          />
+            <label for="nome_do_grupo" class="form-label">Nome do Grupo</label>
+            <input type="text" class="form-control customize-input" id="nome_do_grupo" name="nome_grupo" />
         </div>
         <div class="mb-3">
-          <label for="formGroupExampleInput2" class="form-label"
-            >Descrição do Grupo</label
-          >
-          <input
-            type="text"
-            class="form-control customize-input"
-            style="height: 100px"
-            id="formGroupExampleInput2"
-            name="descricao_grupo"
-          />
+            <label for="descricao_grupo" class="form-label">Descrição do Grupo</label>
+            <input type="text" class="form-control customize-input" style="height: 100px" id="descricao_grupo" name="descricao_grupo" />
         </div>
         <div class="col-md-4">
-          <label for="inputState" class="form-label">Período</label>
-          <select
-            id="inputState"
-            class="form-select"
-            style="width: 75px"
-            name="periodo"
-          >
-            <option selected></option>
-            <option>1º</option>
-            <option>2º</option>
+            <label for="periodo_grupo" class="form-label">Período</label>
+            <select id="periodo_grupo" class="form-select" style="width: 75px" name="periodo">
+                <option selected></option>
+                <option>1º</option>
+                <option>2º</option>
             <option>3º</option>
             <option>4º</option>
             <option>5º</option>
@@ -81,6 +60,7 @@
           type="submit"
           class="btn btn-primary"
           style="background-color: #808080; color: #000000"
+          id="confirma_grupo"
         >
           Confirmar
         </button>

@@ -3,7 +3,7 @@
 <!-- Container principal -->
 <div class="container text-center mt-1 mb-5">
   <!-- Título da página -->
-  <h2 class="editarperfil" style="text-align: center">EDITAR PERFIL</h2>
+  <h2 class="editarperfil" style="text-align: center">EDITAR GRUPO</h2>
   <!-- Container cinza que contém os campos de edição -->
   <div
     class="row align-items-center"
@@ -30,12 +30,12 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: cente;
+          align-items: center;
           margin-top: 20px;
           cursor: pointer;
         "
       >
-      <form method="post" action="{% url 'editar_perfil' %}" enctype="multipart/form-data">
+      <form method="post" action="{% url 'editar_grupo' grupo_id=grupo.id_grupo %}" enctype="multipart/form-data">
         {% csrf_token %}
         <label for="input-foto" class="circle-content">
           <span
@@ -52,8 +52,8 @@
           <!-- Input escondido para seleção de imagem -->
           <input
             type="file"
-            name="foto"
-            id="input-foto"
+            name="foto_grupo"
+            id="input-foto-grupo"
             accept="image/*"
             style="display: none"
           />
@@ -63,11 +63,11 @@
       <!-- Campo para informar qualidades e características -->
       <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label"
-          >INFORME SUAS QUALIDADES E CARACTERISTICAS</label
+          >DESCRIÇÃO</label
         >
         <input
           type="text"
-          name="descricao"
+          name="descricao_grupo"
           class="form-control custom-input"
           style="
             margin-left: 20px;
@@ -76,7 +76,7 @@
             background-color: #7d7d7d;
             border: 1px solid black;
           "
-          id="qualidades_usuario"
+          id="qualidades_grupo"
         />
       </div>
     </div>
@@ -86,26 +86,13 @@
       <!-- Campo para nome completo -->
       <div class="mb-3 mx-auto" style="width: 410px">
         <label for="formGroupExampleInput" class="form-label custom-label"
-          >NOME COMPLETO</label
+          >NOME DO GRUPO</label
         >
         <input
           type="text"
-          name="nome"
+          name="nome_grupo"
           class="form-control custom-input"
-          id="nome_usuario"
-        />
-      </div>
-
-      <!-- Campo para idade -->
-      <div class="mb-3 mx-auto" style="width: 410px">
-        <label for="formGroupExampleInput" class="form-label custom-label"
-          >IDADE</label
-        >
-        <input
-          type="text"
-          name="idade"
-          class="form-control custom-input"
-          id="idade_usuario"
+          id="input_nome_grupo"
         />
       </div>
 
@@ -114,7 +101,7 @@
         <label for="formGroupExampleInput" class="form-label custom-label"
           >PERIODO</label
         >
-        <select id="periodo_usuario" name="periodo" class="form-select custom-input">
+        <select id="input_periodo_grupo" name="periodo_grupo" class="form-select custom-input">
           <option selected></option>
           <option>1º</option>
           <option>2º</option>
@@ -126,46 +113,19 @@
           <option>8º</option>
         </select>
       </div>
-
-      <!-- Campo para curso -->
-      <div class="mb-3 mx-auto" style="width: 410px">
-        <label for="formGroupExampleInput" class="form-label custom-label"
-          >CURSO</label
-        >
-        <input
-          type="text"
-          name="curso"
-          class="form-control custom-input"
-          id="curso_usuario"
-        />
-      </div>
-
-      <!-- Campo para MBTI -->
-      <div class="mb-3 mx-auto" style="width: 410px">
-        <label for="formGroupExampleInput" class="form-label custom-label"
-          >MBTI</label
-        >
-        <input
-          type="text"
-          name="mbti"
-          class="form-control custom-input"
-          id="mbti_usuario"
-        />
-      </div>
       <br />
 
       <!-- Botão de confirmação -->
         <button
           type="submit"
           class="btn btn-dark"
-          id="botao_confirmar"
+          id="botao_confirmar_grupo"
           style="
             background-color: #808080;
             color: #000000;
             width: 140px;
             height: 40px;
           "
-          href="/tela_inicial/"
         >
           Confirmar
         </button>

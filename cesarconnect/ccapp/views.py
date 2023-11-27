@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Pessoa, Grupo
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseForbidden
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth import login as login_django
 from django.contrib.auth.decorators import login_required
@@ -77,7 +77,7 @@ def criargrupo(request):
         novo_grupo = Grupo()
         novo_grupo.nome_grupo = nome_grupo
         novo_grupo.descricao_grupo = descricao_grupo
-        novo_grupo.periodo = periodo
+        novo_grupo.periodo_grupo = periodo
         novo_grupo.save()
 
         pessoa = Pessoa.objects.get(id_usuario=request.session['pessoa_id'])
@@ -122,14 +122,45 @@ def acessarperfil(request):
     if 'pessoa_id' in request.session:
         pessoa_id = request.session['pessoa_id']
         pessoa = Pessoa.objects.get(id_usuario=pessoa_id)
-        nome_usuario = pessoa.nome
         context = {
-            'nome_usuario': nome_usuario
+            'nome': pessoa.nome,
+            'periodo': pessoa.periodo,
+            'descricao': pessoa.descricao,
+            'mbti': pessoa.mbti,
+            'curso': pessoa.curso,
+            'foto': pessoa.foto,
+            'idade': pessoa.idade
         }
         return render(request, 'acessarperfil.html', context)
 
 def editar_perfil(request):
-    return render(request, 'editar_perfil.html')
+    if request.method == 'GET':
+        return render(request, 'editar_perfil.html')
+    else:
+        user = Pessoa.objects.get(id_usuario=request.session['pessoa_id'])
+        user.nome = request.POST['nome']
+        user.idade = request.POST['idade']
+        user.mbti = request.POST['mbti']
+        user.periodo = request.POST['periodo']
+        user.curso = request.POST['curso']
+        user.foto = request.FILES.get('foto')
+        user.descricao = request.POST['descricao']
+        user.save()
+        
+        if 'pessoa_id' in request.session:
+            pessoa_id = request.session['pessoa_id']
+            grupos = Grupo.objects.all()
+            pessoa = Pessoa.objects.get(id_usuario=pessoa_id)
+            nome_usuario = pessoa.nome
+        
+            context = {
+                'grupos' : grupos,
+                'nome_usuario' : nome_usuario,
+            }
+            return render(request, 'tela_inicial.html', context)
+        
+        else:
+            return HttpResponse("erro")
 
 def emailinvalido(request):
     return render(request, 'emailinvalido.html')
@@ -177,3 +208,62 @@ def acesso_grupo(request, id_field):
         'criador' : criador_grupo
     }
     return render(request, 'acesso_pesquisa.html', context)
+
+def editar_grupo(request, grupo_id):
+    if 'pessoa_id' in request.session:
+        pessoa_id = request.session['pessoa_id']
+        grupo_id = int(grupo_id)
+
+        try:
+            pessoa = Pessoa.objects.get(id_usuario=pessoa_id)
+
+            if pessoa.grupo_criado and pessoa.grupo_criado.id_grupo == grupo_id:
+                grupo = Grupo.objects.get(id_grupo=grupo_id)
+
+                if request.method == 'POST':
+                    grupo.nome_grupo = request.POST.get('nome_grupo')
+                    grupo.descricao_grupo = request.POST.get('descricao_grupo')
+                    grupo.periodo_grupo = request.POST.get('periodo_grupo')
+                    grupo.foto_grupo = request.FILES.get('foto_grupo')
+                    grupo.save()
+                    return redirect('meugrupo')
+                
+                context = {'grupo': grupo}
+                return render(request, 'editar_grupo.html', context)
+            
+            else:
+                return HttpResponseForbidden("Você não tem permissão para editar este grupo.")
+        except (Pessoa.DoesNotExist, Grupo.DoesNotExist):
+            return render(request, 'grupo_inexistente.html')
+        
+    else:
+        return redirect('login')
+    
+
+# def adicionar_a_equipe(request, id_usuario):
+#     if 'pessoa_id' in request.session:
+#         criador_id = request.session['pessoa_id']
+#         criador = Pessoa.objects.get(id_usuario=criador_id)
+
+#         if criador.grupo_criado:
+#             grupo_id = criador.grupo_criado.id_grupo
+
+#             grupo = get_object_or_404(Grupo, id_grupo=grupo_id)
+#             usuario_adicionado = get_object_or_404(Pessoa, id_usuario=id_usuario)
+
+#             usuario_adicionado.grupo_criado = grupo
+#             usuario_adicionado.save()
+
+#             return redirect('meugrupo')
+        
+
+#     return HttpResponseForbidden("Erro ao adicionar a equipe")
+    
+def deletar_grupo(request, pk):
+    print(pk)
+    if request.method == "POST":
+        grupo = get_object_or_404(Grupo, id_grupo=pk)
+        grupo.delete()
+    return render(request, "criargrupo.html")
+    
+    
