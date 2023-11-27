@@ -194,7 +194,7 @@
 <ul>
   <li>
     <a
-      href=""
+      href="https://drive.google.com/file/d/1CYdn2LGy0LbRrfcvv10CCR-ksXaquZM8/view?usp=drive_link"
       >Screen Cast Lo-Fi</a
     >
   </li>
@@ -240,7 +240,7 @@
       >CI/CD</a
     >
   </li>
-   <li><a href="">ScreenCast Site</a></li>
+   <li><a href="https://drive.google.com/file/d/1_E9schQBusCUeWhhMRoargYCcO_MktAt/view?usp=drive_link">ScreenCast Site</a></li>
   <li>
     <a
       href="https://github.com/caetrias/connectcesar/blob/main/CONTRIBUTING.md"
