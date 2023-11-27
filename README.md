@@ -212,13 +212,13 @@
   </li>
   <li>
     <a
-      href=""
+      href="https://drive.google.com/file/d/148E5cB6ye7Aje3ZSeb_PK2syTxqORMAo/view?usp=drive_link"
       >Quadro Jira</a
     >
   </li>
   <li>
     <a
-      href=""
+      href="https://drive.google.com/file/d/1oyNtJJyRlUauvorldZXCkJDRh2tsUmgg/view?usp=drive_link"
       >Backlog Jira</a
     >
   </li>
