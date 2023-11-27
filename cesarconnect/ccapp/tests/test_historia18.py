@@ -49,8 +49,6 @@ class Historia18(LiveServerTestCase):
         sem_acesso_grupo = driver.find_element(By.ID, 'sem_acesso')
         sem_acesso_grupo.click()
         time.sleep(1)
-
-        default_page(driver)
         '''
 
         #criação de um grupo
@@ -60,7 +58,7 @@ class Historia18(LiveServerTestCase):
 
         nome_do_grupo = driver.find_element(By.ID, 'nome_do_grupo')
         nome_do_grupo.click()
-        nome_do_grupo.send_keys("mainstreet")
+        nome_do_grupo.send_keys("mains")
         time.sleep(1)
 
         descricao_grupo = driver.find_element(By.ID, 'descricao_grupo')
@@ -73,15 +71,11 @@ class Historia18(LiveServerTestCase):
         select.select_by_visible_text("3º")
         time.sleep(1)
 
-        '''
         cria_grupo = driver.find_element(By.ID, 'confirma_grupo')
         cria_grupo.click()
         time.sleep(1)
-
-        default_page(driver)
 
         #visualizar meu grupo
         meugrupo = driver.find_element(By.ID, 'botao_meugrupo')
         meugrupo.click()
         time.sleep(1)
-        '''

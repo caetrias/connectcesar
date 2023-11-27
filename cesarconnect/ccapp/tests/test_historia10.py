@@ -32,13 +32,13 @@ class Historia10(LiveServerTestCase):
 
         # Find the "qualidades_usuario" element and send keys
         qualidades_usuario = driver.find_element(By.ID, 'nome_do_grupo')
-        qualidades_usuario.send_keys('Campo Minado')
+        qualidades_usuario.send_keys('Mining Day')
         time.sleep(1)
 
         # Find and clear the "nome_usuario" element, then send new keys
         editar_perfil = driver.find_element(By.ID, 'descricao_grupo')
         editar_perfil.clear()  # Clear the existing text, if any.
-        editar_perfil.send_keys('Projeto de Campo Minado programado em C!')
+        editar_perfil.send_keys('Projeto de Campo Minado programado em Flask!')
         time.sleep(1)
 
         # Find the select element
@@ -67,13 +67,13 @@ class Historia10(LiveServerTestCase):
 
             # Find the "qualidades_usuario" element and send keys
             qualidades_usuario = driver.find_element(By.ID, 'nome_do_grupo')
-            qualidades_usuario.send_keys('Monitor Inteligenteee')
+            qualidades_usuario.send_keys('Monitor Divertido/Legal')
             time.sleep(1)
 
             # Find and clear the "nome_usuario" element, then send new keys
             editar_perfil = driver.find_element(By.ID, 'descricao_grupo')
             editar_perfil.clear()  # Clear the existing text, if any.
-            editar_perfil.send_keys('Monitor de PC rodado a energia eolica')
+            editar_perfil.send_keys('Monitor de PC rodado a energia eólica')
             time.sleep(1)
 
             # Find the select element

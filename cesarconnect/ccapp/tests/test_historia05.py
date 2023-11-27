@@ -60,7 +60,6 @@ class Historia05(LiveServerTestCase):
         mbti_usuario.send_keys('ISTJ')
         time.sleep(1)
 
-        
         confirmacao = driver.find_element(By.ID, 'botao_confirmar')
         confirmacao.click()
         time.sleep(1)

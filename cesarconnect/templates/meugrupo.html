@@ -16,21 +16,21 @@
     height: 550px;
   "
 >
-<div style="display: flex; flex-direction: column; align-items: flex-start">
-  <h3 style="margin-left: 20px">INFORMAÇÕES DO GRUPO</h3>
-  <!-- área onde ficará as informações do grupo-->
-  <div
-    style="
-      background-color: white;
-      width: 750px;
-      height: 100px;
-      border-radius: 10px;
-      margin-left: 20px;
-    "
-  >
-    {{grupo.periodo_grupo}} PERIODO
-  </div>
-  <br />
+  <div style="display: flex; flex-direction: column; align-items: flex-start">
+    <h3 style="margin-left: 20px">INFORMAÇÕES DO GRUPO</h3>
+    <!-- área onde ficará as informações do grupo-->
+    <div
+      style="
+        background-color: white;
+        width: 750px;
+        height: 100px;
+        border-radius: 10px;
+        margin-left: 20px;
+      "
+    >
+      {{grupo.periodo_grupo}} PERIODO
+    </div>
+    <br />
     <h3 style="margin-left: 20px">DESCRIÇÃO</h3>
     <!-- área onde ficará a descrição do grupo-->
     <div
@@ -88,43 +88,67 @@
 
     <!-- botões-->
     <div style="margin-top: 20px; text-align: center">
-      {% comment %} <button type="button" class="btn btn-secondary" style="color: black">
+      {% comment %}
+      <button type="button" class="btn btn-secondary" style="color: black">
         Convidar Participantes
-      </button> {% endcomment %}
-      <a href="{% url 'editar_grupo' grupo_id=grupo.id_grupo %}">
-      <button type="button" class="btn btn-primary" style="color: black" id="editargrupo">
-        Editar Grupo
       </button>
-    </a>
-    <br> <br> 
+      {% endcomment %}
+      <a href="{% url 'editar_grupo' grupo_id=grupo.id_grupo %}">
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="color: black"
+          id="editargrupo"
+        >
+          Editar Grupo
+        </button>
+      </a>
+      <br />
+      <br />
 
-      <button type="button" class="btn btn-danger" style="color: black" data-toggle="modal" data-target="#modal_deletar_grupo" id="deletargrupo">
+      <button
+        type="button"
+        class="btn btn-danger"
+        style="color: black"
+        data-toggle="modal"
+        data-target="#modal_deletar_grupo"
+        id="deletargrupo"
+      >
         Deletar Grupo
       </button>
-   
-
     </div>
   </div>
 </div>
 
 <!-- modal de deletar grupo -->
-<div class="modal fade" id="modal_deletar_grupo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="modal_deletar_grupo"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">CONFIRMAR DELEÇÃO DO GRUPO</h5>
+        <h5 class="modal-title">CONFIRMAR DELEÇÃO DO GRUPO</h5>
       </div>
       <div class="modal-body d-flex justify-content-center align-items-center">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">
+          Cancelar
+        </button>
       </div>
 
-          
-      <div class="modal-footer d-flex justify-content-center align-items-center">
+      <div
+        class="modal-footer d-flex justify-content-center align-items-center"
+      >
         <form action="{% url 'deletar_grupo' grupo.id_grupo%}" method="POST">
           {% csrf_token %}
-        <button type="submit" class="btn btn-danger">Confirmar</button>
-      </form>
-
+          <button type="submit" class="btn btn-danger" id="confirmar_delecao">
+            Confirmar
+          </button>
+        </form>
       </div>
     </div>
   </div>
