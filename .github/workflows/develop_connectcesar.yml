@@ -38,7 +38,10 @@ jobs:
           rm .env
           cd ..
         
-      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
+      - name: Run tests
+        run: |
+          cd ./cesarconnect/
+          python manage.py test ccapp.tests
       
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v2
