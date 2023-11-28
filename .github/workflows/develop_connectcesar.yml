@@ -29,6 +29,21 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r ./cesarconnect/requirements.txt
+
+      - name: Instalar Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+
+      - name: Instalar ChromeDriver
+        run: |
+          CHROME_VERSION=$(google-chrome --version | cut -f 3 -d ' ' | cut -d '.' -f 1)
+          CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
+          wget -N "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip" -P ~/
+          unzip ~/chromedriver_linux64.zip -d ~/
+          sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
+          sudo chown root:root /usr/local/bin/chromedriver
+          sudo chmod 0755 /usr/local/bin/chromedriver
         
       - name: Cleaning testing files
         run: |
@@ -36,6 +51,11 @@ jobs:
           rm db.sqlite3
           rm .env
           cd ..
+
+      - name: Run tests
+        run: |
+          cd ./cesarconnect/
+          python manage.py test ccapp.tests
       
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v2
