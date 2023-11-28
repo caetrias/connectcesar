@@ -24,7 +24,6 @@ def default_page(chrome):
     chrome.get('http://127.0.0.1:8000/')
     time.sleep(1)
 
-
 def login():
     email_input = driver.find_element(By.ID, 'exampleInputEmail1')
     email_input.click()
