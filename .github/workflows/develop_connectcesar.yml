@@ -29,8 +29,7 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r ./cesarconnect/requirements.txt
-
-        
+   
       - name: Cleaning testing files
         run: |
           cd ./cesarconnect/
