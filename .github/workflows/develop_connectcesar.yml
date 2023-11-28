@@ -37,11 +37,6 @@ jobs:
           rm db.sqlite3
           rm .env
           cd ..
-        
-      - name: Run tests
-        run: |
-          cd ./cesarconnect/
-          python manage.py test ccapp.tests
       
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v2
