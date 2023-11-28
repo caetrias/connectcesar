@@ -29,21 +29,6 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r ./cesarconnect/requirements.txt
-
-      - name: Instalar Chrome
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
-
-      - name: Instalar ChromeDriver
-        run: |
-          CHROME_VERSION=$(google-chrome --version | grep -oP "\d+" | head -1)
-          CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
-          wget -N "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip" -P ~/
-          unzip ~/chromedriver_linux64.zip -d ~/
-          sudo mv -f ~/chromedriver /usr/local/bin/chromedriver
-          sudo chown root:root /usr/local/bin/chromedriver
-          sudo chmod 0755 /usr/local/bin/chromedriver
         
       - name: Cleaning testing files
         run: |
