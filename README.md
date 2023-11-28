@@ -236,8 +236,14 @@
   </li>
   <li>
     <a
-      href=""
-      >CI/CD</a
+      href="https://drive.google.com/file/d/1ErjWkJ6gJsTF6yRyAq1zVFOJhMOrziFe/view?usp=sharing"
+      >CI/CD (sem testes)</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://drive.google.com/file/d/1Ejk9ETzb9JFeedmUKlWUQa5q-nlcEnUK/view?usp=sharing"
+      >CI/CD (com testes)</a
     >
   </li>
    <li><a href="https://drive.google.com/file/d/1_E9schQBusCUeWhhMRoargYCcO_MktAt/view?usp=drive_link">ScreenCast Site</a></li>
