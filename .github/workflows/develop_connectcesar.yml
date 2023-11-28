@@ -37,7 +37,7 @@ jobs:
 
       - name: Instalar ChromeDriver
         run: |
-          CHROME_VERSION=$(google-chrome --version | cut -f 3 -d ' ' | cut -d '.' -f 1)
+          CHROME_VERSION=$(google-chrome --version | sed 's/Google Chrome //')
           CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
           wget -N "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip" -P ~/
           unzip ~/chromedriver_linux64.zip -d ~/
