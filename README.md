@@ -53,7 +53,7 @@
 <h2>Links Importantes</h2>
 <ul>
     <li>
-        <a href="https://connectcesar.azurewebsites.net/">Connect CESAR Site</a>
+        <a href="https://connectcesar.azurewebsites.net/">Connect CESAR Site (off)</a>
     </li>
   <li>
     <a
